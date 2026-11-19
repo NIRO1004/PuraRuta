@@ -8,6 +8,8 @@ using PuraRuta.ViewModels;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace PuraRuta.Controllers
 {
@@ -171,6 +173,18 @@ namespace PuraRuta.Controllers
         public IActionResult Login()
         {
             return View();
+        }
+
+        // Cerrar sesión
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(
+                CookieAuthenticationDefaults.AuthenticationScheme
+            );
+
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpPost]

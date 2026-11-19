@@ -80,17 +80,48 @@
                     <!-- ACCESO DE USUARIOS -->
                     <div class="d-flex gap-2 align-items-center">
 
-                        <a class="btn btn-login"
-                           asp-controller="Cuenta"
-                           asp-action="Login">
-                            Iniciar sesión
-                        </a>
+                        @if (User.Identity != null && User.Identity.IsAuthenticated)
+                        {
+                            @if (User.IsInRole("Administrador"))
+                            {
+                                <span class="text-white">
+                                    Administrador
+                                </span>
+                            }
+                            else if (User.IsInRole("Turista"))
+                            {
+                                <span class="text-white">
+                                    Hola, @User.Identity.Name
+                                </span>
+                            }
 
-                        <a class="btn btn-register"
-                           asp-controller="Cuenta"
-                           asp-action="Registro">
-                            Registrarse
-                        </a>
+                            <form asp-controller="Cuenta"
+                                  asp-action="Logout"
+                                  method="post"
+                                  class="m-0">
+
+                                @Html.AntiForgeryToken()
+
+                                <button type="submit" class="btn btn-login">
+                                    Cerrar sesión
+                                </button>
+
+                            </form>
+                        }
+                        else
+                        {
+                            <a class="btn btn-login"
+                               asp-controller="Cuenta"
+                               asp-action="Login">
+                                Iniciar sesión
+                            </a>
+
+                            <a class="btn btn-register"
+                               asp-controller="Cuenta"
+                               asp-action="Registro">
+                                Registrarse
+                            </a>
+                        }
 
                     </div>
 
