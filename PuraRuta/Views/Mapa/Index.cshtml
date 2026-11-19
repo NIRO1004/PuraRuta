@@ -1,0 +1,327 @@
+﻿@model IEnumerable<PuraRuta.Models.Experiencium>
+
+@{
+    ViewData["Title"] = "Mapa de experiencias";
+}
+
+<div class="container py-5">
+
+    <div class="text-center mb-4">
+        <h1 class="fw-bold">Explora Costa Rica</h1>
+        <p class="text-muted">
+            Descubre experiencias turísticas y encuentra su ubicación.
+        </p>
+    </div>
+
+    <div class="mapa-container">
+        <div id="mapaExperiencias"></div>
+    </div>
+
+    
+    
+    <div class="catalog-content mt-5">
+
+        <div class="catalog-results">
+            <div>
+                <h2>Experiencias disponibles</h2>
+                <p>Encuentra tu próxima aventura.</p>
+            </div>
+
+            <span class="catalog-count">
+                @Model.Count() experiencias
+            </span>
+        </div>
+
+        @if (!Model.Any())
+        {
+            <div class="catalog-empty">
+                <h3>No hay experiencias disponibles</h3>
+                <p>Pronto encontrarás nuevas actividades para descubrir.</p>
+            </div>
+        }
+        else
+        {
+            <div class="catalog-grid">
+
+                @foreach (var experiencia in Model)
+                {
+                    <article class="experience-card">
+
+                        <div class="experience-cover">
+
+                            @if (experiencia.FotoExperiencia.Any())
+                            {
+                                var foto = experiencia.FotoExperiencia.First();
+
+                                <img src="@foto.RutaImagen"
+                                     alt="@foto.Descripcion"
+                                     class="experience-image" />
+                            }
+                            else
+                            {
+                                <span class="cover-symbol">✦</span>
+                                <span class="cover-brand">PuraRuta</span>
+                            }
+
+                            <span class="cover-label">
+                                @experiencia.IdCategoriaNavigation.Nombre
+                            </span>
+
+                        </div>
+
+                        <div class="experience-body">
+
+                            <div class="experience-category">
+                                @experiencia.IdCategoriaNavigation.Nombre
+                            </div>
+
+                            <h3>@experiencia.Nombre</h3>
+
+                            <p class="experience-description">
+                                @experiencia.DescripcionExperiencia
+                            </p>
+
+                            <div class="experience-community">
+                                <span>⌖</span>
+                                @experiencia.IdComunidadNavigation.Nombre
+                            </div>
+
+                            <div class="experience-details">
+
+                                <div>
+                                    <span>Duración</span>
+                                    <strong>@experiencia.DuracionHoras h</strong>
+                                </div>
+
+                                <div>
+                                    <span>Edad mínima</span>
+                                    <strong>@experiencia.EdadMinima años</strong>
+                                </div>
+
+                                <div>
+                                    <span>Dificultad</span>
+                                    <strong>@experiencia.Dificultad</strong>
+                                </div>
+
+                            </div>
+
+                            <div class="experience-footer">
+
+                                <div>
+                                    <span class="price-label">Precio por persona</span>
+                                    <strong class="experience-price">
+                                        ₡@experiencia.Precio.ToString("N2")
+                                    </strong>
+                                </div>
+
+                                <div class="d-flex flex-column gap-2">
+
+                                    <button type="button"
+                                            class="btn-experience"
+                                            onclick="enfocarExperiencia(@experiencia.IdExperiencia)">
+                                        Ver ubicación
+                                    </button>
+
+                                    <a asp-controller="Catalogo"
+                                       asp-action="Detalles"
+                                       asp-route-id="@experiencia.IdExperiencia"
+                                       class="btn-experience text-center">
+                                        Ver detalles
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+                }
+
+            </div>
+        }
+
+    </div>
+
+
+
+</div>
+
+@section Scripts {
+
+    <script>
+        const experiencias = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(
+                    Model.Select(e => new
+                    {
+                            id = e.IdExperiencia,
+                            nombre = e.Nombre,
+                             descripcion = e.DescripcionExperiencia,
+                            precio = e.Precio,
+                            latitud = e.IdDireccionNavigation.Latitud,
+                            longitud = e.IdDireccionNavigation.Longitud,
+                            comunidad = e.IdComunidadNavigation.Nombre,
+                            categoria = e.IdCategoriaNavigation.Nombre
+                    })
+            ));
+
+        let mapaExperienciasInstancia;
+        let marcadoresExperiencias = {};
+        let ventanaInfoExperiencias;
+
+        function initMapaExperiencias() {
+
+            const mapa = new google.maps.Map(
+                document.getElementById("mapaExperiencias"),
+                {
+                    center: { lat: 9.9281, lng: -84.0907 },
+                    zoom: 8,
+                    mapTypeControl: true,
+                    streetViewControl: false
+                }
+            );
+
+            mapaExperienciasInstancia = mapa;
+
+            const ventana = new google.maps.InfoWindow();
+
+            ventanaInfoExperiencias = ventana;
+
+            // Límites para ajustar el mapa a todas las experiencias
+            const limites = new google.maps.LatLngBounds();
+            let cantidadMarcadores = 0;
+
+            experiencias.forEach(experiencia => {
+
+                if (experiencia.latitud == null ||
+                    experiencia.longitud == null) {
+                    return;
+                }
+
+                const posicion = {
+                    lat: Number(experiencia.latitud),
+                    lng: Number(experiencia.longitud)
+                };
+
+                if (!Number.isFinite(posicion.lat) ||
+                    !Number.isFinite(posicion.lng) ||
+                    Math.abs(posicion.lat) > 90 ||
+                    Math.abs(posicion.lng) > 180) {
+                    return;
+                }
+
+                const marcador = new google.maps.Marker({
+                    position: posicion,
+                    map: mapa,
+                    title: experiencia.nombre
+                });
+
+                // Guardar el marcador usando el ID de la experiencia
+                marcadoresExperiencias[experiencia.id] = marcador;
+
+                // Ampliar los límites del mapa
+                limites.extend(posicion);
+                cantidadMarcadores++;
+
+                marcador.addListener("click", () => {
+
+                    ventana.setContent(`
+                        <div style="max-width:260px">
+                            <h5>${escaparHTML(experiencia.nombre)}</h5>
+                            <p><strong>Comunidad:</strong> ${escaparHTML(experiencia.comunidad)}</p>
+                            <p><strong>Categoría:</strong> ${escaparHTML(experiencia.categoria)}</p>
+                            <p><strong>Precio:</strong> ₡${Number(experiencia.precio).toLocaleString("es-CR")}</p>
+                            <p>${escaparHTML(experiencia.descripcion ?? "")}</p>
+                            <a href="/Catalogo/Detalles/${experiencia.id}">
+                                Ver detalles
+                            </a>
+                        </div>
+                    `);
+
+                    ventana.open(mapa, marcador);
+                });
+            });
+
+            // Ajustar el zoom según la cantidad de experiencias
+            if (cantidadMarcadores > 1) {
+                mapa.fitBounds(limites);
+            }
+            else if (cantidadMarcadores === 1) {
+                mapa.setCenter(limites.getCenter());
+                mapa.setZoom(13);
+            }
+        }
+
+        function enfocarExperiencia(id) {
+
+            const marcador = marcadoresExperiencias[id];
+
+            if (!marcador) {
+                return;
+            }
+
+            mapaExperienciasInstancia.panTo(
+                marcador.getPosition()
+            );
+
+            mapaExperienciasInstancia.setZoom(15);
+
+            google.maps.event.trigger(marcador, "click");
+        }
+
+        function escaparHTML(texto) {
+            return String(texto).replace(/[&<>"']/g, caracter => ({
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#39;"
+            })[caracter]);
+        }
+    </script>
+
+    <script>
+        (g => {
+            var h, a, k,
+                p = "The Google Maps JavaScript API",
+                c = "google",
+                l = "importLibrary",
+                q = "__ib__",
+                m = document,
+                b = window;
+
+            b = b[c] || (b[c] = {});
+            var d = b.maps || (b.maps = {}),
+                r = new Set(),
+                e = new URLSearchParams();
+
+            const u = () => h || (h = new Promise(async (resolve, reject) => {
+                await (a = m.createElement("script"));
+                e.set("libraries", [...r] + "");
+                for (k in g) e.set(
+                    k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()),
+                    g[k]
+                );
+                e.set("callback", c + ".maps." + q);
+                a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+                d[q] = resolve;
+                a.onerror = () => reject(Error(p + " could not load."));
+                a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+                m.head.append(a);
+            }));
+
+            d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n));
+
+        })({
+            key: "AIzaSyDOEO1WzwOVmJqYcD4UWxazEOOW66vnQ-0",
+            v: "weekly"
+        });
+
+        async function cargarMapa() {
+            await google.maps.importLibrary("maps");
+            await google.maps.importLibrary("marker");
+            initMapaExperiencias();
+        }
+
+        cargarMapa();
+    </script>
+}
