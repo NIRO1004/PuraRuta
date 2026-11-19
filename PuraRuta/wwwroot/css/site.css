@@ -532,3 +532,588 @@ a {
         opacity: 0.7;
     }
 }
+
+
+/* ===== CATÁLOGO PURARUTA ===== */
+
+.catalog-container {
+    padding: 55px 7% 75px;
+    min-height: 600px;
+}
+
+.catalog-header {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 55px;
+}
+
+.catalog-tag {
+    display: inline-block;
+    color: #087a35;
+    background: #e2f5e9;
+    padding: 8px 17px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.catalog-header h1 {
+    color: #17212b;
+    font-size: 38px;
+    font-weight: 750;
+    margin-bottom: 14px;
+}
+
+.catalog-header p {
+    color: #647184;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.catalog-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.catalog-results {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+    .catalog-results h2 {
+        font-size: 23px;
+        font-weight: 700;
+        color: #17212b;
+        margin-bottom: 5px;
+    }
+
+    .catalog-results p {
+        color: #647184;
+        margin: 0;
+    }
+
+.catalog-count {
+    background: #e6f5f0;
+    color: #087a35;
+    padding: 9px 16px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.experience-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e5eaf0;
+    box-shadow: 0 5px 18px rgba(23, 33, 43, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .experience-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 28px rgba(23, 33, 43, 0.12);
+    }
+
+.experience-cover {
+    height: 175px;
+    background: linear-gradient(120deg, #087a35, #00a94f 55%, #00c9bd);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+    .experience-cover::before,
+    .experience-cover::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.12);
+    }
+
+    .experience-cover::before {
+        width: 220px;
+        height: 220px;
+        top: -120px;
+        right: -30px;
+    }
+
+    .experience-cover::after {
+        width: 180px;
+        height: 180px;
+        bottom: -125px;
+        left: -35px;
+    }
+
+.cover-symbol {
+    color: white;
+    font-size: 65px;
+    font-weight: 300;
+    z-index: 1;
+}
+
+.cover-label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(255, 255, 255, 0.92);
+    color: #087a35;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.cover-brand {
+    position: absolute;
+    bottom: 12px;
+    right: 15px;
+    color: white;
+    font-weight: 700;
+    font-size: 13px;
+    z-index: 2;
+}
+
+.experience-body {
+    padding: 22px;
+}
+
+.experience-category {
+    color: #087a35;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.experience-body h3 {
+    color: #17212b;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.experience-description {
+    color: #647184;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 45px;
+}
+
+.experience-community {
+    color: #475467;
+    font-size: 13px;
+    margin: 17px 0;
+}
+
+    .experience-community span {
+        color: #00a94f;
+        font-size: 18px;
+        margin-right: 5px;
+    }
+
+.experience-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 16px 0;
+    border-top: 1px solid #edf0f4;
+    border-bottom: 1px solid #edf0f4;
+}
+
+    .experience-details div {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .experience-details span,
+    .price-label {
+        color: #8792a2;
+        font-size: 11px;
+    }
+
+    .experience-details strong {
+        color: #344054;
+        font-size: 12px;
+    }
+
+.experience-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.experience-price {
+    display: block;
+    color: #087a35;
+    font-size: 19px;
+    font-weight: 750;
+    margin-top: 4px;
+}
+
+.btn-experience {
+    background: #087a35;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.catalog-empty {
+    text-align: center;
+    background: white;
+    padding: 55px 20px;
+    border-radius: 15px;
+    border: 1px solid #e5eaf0;
+}
+
+    .catalog-empty h3 {
+        color: #17212b;
+    }
+
+    .catalog-empty p {
+        color: #647184;
+    }
+
+@media (max-width: 950px) {
+    .catalog-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .catalog-container {
+        padding: 40px 18px 55px;
+    }
+
+    .catalog-header h1 {
+        font-size: 29px;
+    }
+
+    .catalog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .catalog-results {
+        align-items: flex-start;
+        gap: 12px;
+        flex-direction: column;
+    }
+}
+
+
+
+/* ===== FILTROS DEL CATÁLOGO ===== */
+
+.catalog-filters {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    align-items: end;
+    background: white;
+    border: 1px solid #e5eaf0;
+    border-radius: 15px;
+    padding: 22px;
+    margin-bottom: 35px;
+    box-shadow: 0 5px 18px rgba(23, 33, 43, 0.05);
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+    .filter-group label {
+        color: #344054;
+        font-size: 13px;
+        font-weight: 650;
+    }
+
+    .filter-group select,
+    .filter-group input {
+        width: 100%;
+        min-width: 0;
+        height: 43px;
+        padding: 0 12px;
+        border: 1px solid #d9e0e8;
+        border-radius: 8px;
+        background: #fff;
+        color: #344054;
+        outline: none;
+    }
+
+        .filter-group select:focus,
+        .filter-group input:focus {
+            border-color: #00a94f;
+            box-shadow: 0 0 0 3px rgba(0, 169, 79, 0.10);
+        }
+
+.filter-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btn-filter,
+.btn-clear {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+    padding: 9px 22px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 650;
+    text-decoration: none;
+}
+
+.btn-filter {
+    background: #087a35;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+    .btn-filter:hover {
+        background: #065e29;
+    }
+
+.btn-clear {
+    background: #eaf7f5;
+    color: #087a35;
+}
+
+    .btn-clear:hover {
+        background: #d8f0eb;
+        color: #065e29;
+    }
+
+@media (max-width: 850px) {
+    .catalog-filters {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 500px) {
+    .catalog-filters {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ===== DETALLES DE EXPERIENCIA ===== */
+
+.details-container {
+    max-width: 1050px;
+    margin: auto;
+    padding: 45px 25px 70px;
+}
+
+.details-back {
+    display: inline-block;
+    color: #087a35;
+    font-weight: 650;
+    text-decoration: none;
+    margin-bottom: 22px;
+}
+
+    .details-back:hover {
+        color: #00a94f;
+    }
+
+.details-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #e5eaf0;
+    box-shadow: 0 8px 25px rgba(23, 33, 43, 0.07);
+}
+
+.details-cover {
+    height: 230px;
+    background: linear-gradient(120deg, #087a35, #00a94f 55%, #00c9bd);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+    .details-cover::before,
+    .details-cover::after {
+        content: "";
+        position: absolute;
+        background: rgba(255,255,255,.12);
+        border-radius: 50%;
+    }
+
+    .details-cover::before {
+        width: 280px;
+        height: 280px;
+        top: -170px;
+        right: -30px;
+    }
+
+    .details-cover::after {
+        width: 220px;
+        height: 220px;
+        bottom: -150px;
+        left: -30px;
+    }
+
+.details-cover-symbol {
+    color: white;
+    font-size: 85px;
+    z-index: 1;
+}
+
+.details-cover-brand {
+    position: absolute;
+    bottom: 18px;
+    right: 25px;
+    color: white;
+    font-weight: 700;
+}
+
+.details-content {
+    padding: 35px;
+}
+
+.details-category {
+    display: inline-block;
+    background: #e2f5e9;
+    color: #087a35;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.details-content h1 {
+    color: #17212b;
+    font-size: 32px;
+    margin: 15px 0;
+}
+
+.details-description {
+    color: #647184;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.details-community {
+    margin: 20px 0;
+    color: #344054;
+}
+
+.details-information {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 28px;
+}
+
+.details-item {
+    background: #f5f8fa;
+    padding: 18px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+    .details-item span {
+        color: #647184;
+        font-size: 13px;
+    }
+
+    .details-item strong {
+        color: #087a35;
+        font-size: 16px;
+    }
+
+.details-location {
+    margin-top: 30px;
+    padding-top: 22px;
+    border-top: 1px solid #e5eaf0;
+}
+
+    .details-location h3 {
+        color: #17212b;
+        font-size: 19px;
+    }
+
+    .details-location p {
+        color: #647184;
+    }
+
+@media (max-width: 650px) {
+    .details-content {
+        padding: 22px;
+    }
+
+        .details-content h1 {
+            font-size: 26px;
+        }
+
+    .details-information {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+.experience-cover {
+    position: relative;
+    height: 175px;
+    overflow: hidden;
+}
+
+.experience-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease;
+}
+
+.experience-card:hover .experience-image {
+    transform: scale(1.06);
+}
+
+
+/* Fotografías en detalles de experiencias */
+
+.details-cover {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.details-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}

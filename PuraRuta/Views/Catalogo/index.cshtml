@@ -1,0 +1,188 @@
+﻿@model IEnumerable<PuraRuta.Models.Experiencium>
+
+@{
+    ViewData["Title"] = "Catálogo de experiencias";
+}
+
+<div class="catalog-container">
+
+    <section class="catalog-header">
+        <span class="catalog-tag">TURISMO COMUNITARIO</span>
+        <h1>Descubre nuevas experiencias</h1>
+        <p>
+            Explora Costa Rica, conoce sus comunidades y encuentra
+            actividades únicas para tu próxima aventura.
+        </p>
+    </section>
+
+    <section class="catalog-content">
+
+        
+        <form method="get" asp-controller="Catalogo" asp-action="Index"
+              class="catalog-filters">
+
+            <div class="filter-group">
+                <label for="categoriaId">Categoría</label>
+                <select name="categoriaId" id="categoriaId">
+                    <option value="">Todas las categorías</option>
+                    @foreach (var categoria in ViewBag.Categorias)
+                    {
+                        <option value="@categoria.IdCategoria"
+                                selected="@(ViewBag.CategoriaId == categoria.IdCategoria)">
+                            @categoria.Nombre
+                        </option>
+                    }
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="provinciaId">Provincia</label>
+                <select name="provinciaId" id="provinciaId">
+                    <option value="">Todas las provincias</option>
+                    @foreach (var provincia in ViewBag.Provincias)
+                    {
+                        <option value="@provincia.IdProvincia"
+                                selected="@(ViewBag.ProvinciaId == provincia.IdProvincia)">
+                            @provincia.Nombre
+                        </option>
+                    }
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="precioMinimo">Precio mínimo (₡)</label>
+                <input type="number" name="precioMinimo" id="precioMinimo"
+                       min="0" step="0.01"
+                       value="@ViewBag.PrecioMinimo"
+                       placeholder="Ej. 5000" />
+            </div>
+
+            <div class="filter-group">
+                <label for="precioMaximo">Precio máximo (₡)</label>
+                <input type="number" name="precioMaximo" id="precioMaximo"
+                       min="0" step="0.01"
+                       value="@ViewBag.PrecioMaximo"
+                       placeholder="Ej. 15000" />
+            </div>
+
+            <div class="filter-actions">
+                <button type="submit" class="btn-filter">
+                    Buscar
+                </button>
+
+                <a asp-controller="Catalogo" asp-action="Index"
+                   class="btn-clear">
+                    Limpiar
+                </a>
+            </div>
+
+        </form>
+
+
+        <div class="catalog-results">
+            <div>
+                <h2>Experiencias disponibles</h2>
+                <p>Encuentra tu próxima aventura.</p>
+            </div>
+
+            <span class="catalog-count">
+                @Model.Count() experiencias
+            </span>
+        </div>
+
+        @if (!Model.Any())
+        {
+            <div class="catalog-empty">
+                <h3>No hay experiencias disponibles</h3>
+                <p>Pronto encontrarás nuevas actividades para descubrir.</p>
+            </div>
+        }
+        else
+        {
+            <div class="catalog-grid">
+
+                @foreach (var experiencia in Model)
+                {
+                    <article class="experience-card">
+
+                        
+                        <div class="experience-cover">
+                            @if (experiencia.FotoExperiencia.Any())
+                            {
+                                var foto = experiencia.FotoExperiencia.First();
+
+                                <img src="@foto.RutaImagen"
+                                     alt="@foto.Descripcion"
+                                     class="experience-image" />
+                            }
+                            else
+                            {
+                                <span class="cover-symbol">✦</span>
+                                <span class="cover-brand">PuraRuta</span>
+                            }
+
+                            <span class="cover-label">
+                                @experiencia.IdCategoriaNavigation.Nombre
+                            </span>
+                        </div>
+
+
+                        <div class="experience-body">
+
+                            <div class="experience-category">
+                                @experiencia.IdCategoriaNavigation.Nombre
+                            </div>
+
+                            <h3>@experiencia.Nombre</h3>
+
+                            <p class="experience-description">
+                                @experiencia.DescripcionExperiencia
+                            </p>
+
+                            <div class="experience-community">
+                                <span>⌖</span>
+                                @experiencia.IdComunidadNavigation.Nombre
+                            </div>
+
+                            <div class="experience-details">
+                                <div>
+                                    <span>Duración</span>
+                                    <strong>@experiencia.DuracionHoras h</strong>
+                                </div>
+
+                                <div>
+                                    <span>Edad mínima</span>
+                                    <strong>@experiencia.EdadMinima años</strong>
+                                </div>
+
+                                <div>
+                                    <span>Dificultad</span>
+                                    <strong>@experiencia.Dificultad</strong>
+                                </div>
+                            </div>
+
+                            <div class="experience-footer">
+                                <div>
+                                    <span class="price-label">Precio por persona</span>
+                                    <strong class="experience-price">
+                                        ₡@experiencia.Precio.ToString("N2")
+                                    </strong>
+                                </div>
+
+                                <a asp-controller="Catalogo"
+                                   asp-action="Detalles"
+                                   asp-route-id="@experiencia.IdExperiencia"
+                                   class="btn-experience">
+                                    Ver detalles
+                                </a>
+                            </div>
+
+                        </div>
+                    </article>
+                }
+
+            </div>
+        }
+
+    </section>
+</div>

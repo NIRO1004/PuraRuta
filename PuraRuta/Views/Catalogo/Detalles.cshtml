@@ -1,0 +1,101 @@
+﻿@model PuraRuta.Models.Experiencium
+
+@{
+    ViewData["Title"] = Model.Nombre;
+}
+
+<div class="details-container">
+
+    <a asp-controller="Catalogo" asp-action="Index"
+       class="details-back">
+        ← Volver al catálogo
+    </a>
+
+    <div class="details-card">
+
+        
+        <div class="details-cover">
+
+            @if (Model.FotoExperiencia.Any())
+            {
+                var foto = Model.FotoExperiencia.First();
+
+                <img src="@foto.RutaImagen"
+                     alt="@foto.Descripcion"
+                     class="details-image" />
+            }
+            else
+            {
+                <span class="details-cover-symbol">✦</span>
+                <span class="details-cover-brand">PuraRuta</span>
+            }
+
+        </div>
+
+
+        <div class="details-content">
+
+            <span class="details-category">
+                @Model.IdCategoriaNavigation.Nombre
+            </span>
+
+            <h1>@Model.Nombre</h1>
+
+            <p class="details-description">
+                @Model.DescripcionExperiencia
+            </p>
+
+            <div class="details-community">
+                <strong>Comunidad:</strong>
+                @Model.IdComunidadNavigation.Nombre
+            </div>
+
+            <div class="details-information">
+
+                <div class="details-item">
+                    <span>Precio por persona</span>
+                    <strong>₡@Model.Precio.ToString("N2")</strong>
+                </div>
+
+                <div class="details-item">
+                    <span>Duración</span>
+                    <strong>@Model.DuracionHoras horas</strong>
+                </div>
+
+                <div class="details-item">
+                    <span>Edad mínima</span>
+                    <strong>@Model.EdadMinima años</strong>
+                </div>
+
+                <div class="details-item">
+                    <span>Dificultad</span>
+                    <strong>@Model.Dificultad</strong>
+                </div>
+
+                <div class="details-item">
+                    <span>Capacidad diaria</span>
+                    <strong>@Model.CapacidadDiaria personas</strong>
+                </div>
+
+                <div class="details-item">
+                    <span>Transporte público</span>
+                    <strong>
+                        @(Model.TransportePublico ? "Disponible" : "No disponible")
+                    </strong>
+                </div>
+
+            </div>
+
+            <div class="details-location">
+                <h3>Ubicación</h3>
+
+                <p>
+                    @Model.IdDireccionNavigation.IdDistritoNavigation.Nombre,
+                    @Model.IdDireccionNavigation.IdDistritoNavigation.IdCantonNavigation.Nombre,
+                    @Model.IdDireccionNavigation.IdDistritoNavigation.IdCantonNavigation.IdProvinciaNavigation.Nombre
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
