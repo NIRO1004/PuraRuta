@@ -1117,3 +1117,158 @@ a {
     object-fit: cover;
     display: block;
 }
+
+
+/* ===== REGISTRO DE TURISTAS ===== */
+
+.register-container {
+    max-width: 900px;
+    margin: 45px auto 70px;
+    padding: 0 20px;
+}
+
+.register-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    .register-heading h1 {
+        color: #17212b;
+        font-size: 34px;
+        font-weight: 750;
+    }
+
+        .register-heading h1 span {
+            color: #087a35;
+        }
+
+    .register-heading p {
+        color: #647184;
+    }
+
+.register-card {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid #e5eaf0;
+    box-shadow: 0 8px 25px rgba(23,33,43,.06);
+}
+
+    .register-card h2 {
+        font-size: 19px;
+        color: #087a35;
+        margin: 12px 0 22px;
+    }
+
+.register-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.register-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+    .register-field label {
+        font-size: 13px;
+        font-weight: 650;
+        color: #344054;
+    }
+
+    .register-field input,
+    .register-field select {
+        height: 45px;
+        padding: 0 12px;
+        border: 1px solid #d9e0e8;
+        border-radius: 8px;
+        background: white;
+        color: #344054;
+        width: 100%;
+    }
+
+        .register-field input:focus,
+        .register-field select:focus {
+            outline: none;
+            border-color: #00a94f;
+            box-shadow: 0 0 0 3px rgba(0,169,79,.10);
+        }
+
+    .register-field span {
+        color: #dc3545;
+        font-size: 12px;
+    }
+
+.register-full {
+    grid-column: 1 / -1;
+}
+
+.register-map-info {
+    color: #647184;
+    font-size: 14px;
+}
+
+#register-map {
+    width: 100%;
+    height: 290px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.coordinates-grid {
+    margin-bottom: 25px;
+}
+
+.register-vehicle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0 25px;
+    color: #344054;
+}
+
+    .register-vehicle input {
+        accent-color: #087a35;
+        width: 17px;
+        height: 17px;
+    }
+
+.register-submit {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-register-submit {
+    background: #087a35;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    padding: 13px 28px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+    .btn-register-submit:hover {
+        background: #065e29;
+    }
+
+@media (max-width: 600px) {
+    .register-card {
+        padding: 22px;
+    }
+
+    .register-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .register-full {
+        grid-column: auto;
+    }
+
+    .register-heading h1 {
+        font-size: 27px;
+    }
+}

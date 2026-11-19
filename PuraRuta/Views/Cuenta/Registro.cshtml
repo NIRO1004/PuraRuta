@@ -1,0 +1,310 @@
+﻿@model PuraRuta.ViewModels.RegistroTuristaViewModel
+
+@{
+    ViewData["Title"] = "Crear cuenta";
+}
+
+<div class="register-container">
+
+    <div class="register-heading">
+        <h1>Únete a <span>PuraRuta</span></h1>
+        <p>Crea tu cuenta y comienza a descubrir Costa Rica.</p>
+    </div>
+
+    @if (TempData["RegistroExitoso"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["RegistroExitoso"]
+        </div>
+    }
+
+    <form asp-controller="Cuenta"
+          asp-action="Registro"
+          method="post"
+          class="register-card">
+
+        <h2>Información personal</h2>
+
+        <div class="register-grid">
+
+            <div class="register-field">
+                <label asp-for="Nombre">Nombre</label>
+                <input asp-for="Nombre" placeholder="Tu nombre" />
+                <span asp-validation-for="Nombre"></span>
+            </div>
+
+            <div class="register-field">
+                <label asp-for="Apellido1">Primer apellido</label>
+                <input asp-for="Apellido1" placeholder="Primer apellido" />
+                <span asp-validation-for="Apellido1"></span>
+            </div>
+
+            <div class="register-field">
+                <label asp-for="Apellido2">Segundo apellido</label>
+                <input asp-for="Apellido2" placeholder="Segundo apellido" />
+                <span asp-validation-for="Apellido2"></span>
+            </div>
+
+            <div class="register-field">
+                <label asp-for="FechaNacimiento">Fecha de nacimiento</label>
+                <input asp-for="FechaNacimiento" type="date" />
+                <span asp-validation-for="FechaNacimiento"></span>
+            </div>
+
+            <div class="register-field">
+                <label asp-for="Correo">Correo electrónico</label>
+                <input asp-for="Correo" type="email"
+                       placeholder="correo@ejemplo.com" />
+                <span asp-validation-for="Correo"></span>
+            </div>
+
+            <div class="register-field">
+                <label asp-for="Telefono">Teléfono</label>
+                <input asp-for="Telefono" placeholder="88888888"
+                       maxlength="8" />
+                <span asp-validation-for="Telefono"></span>
+            </div>
+
+        </div>
+
+        <h2>Información de acceso</h2>
+
+        <div class="register-grid">
+
+            <div class="register-field">
+                <label asp-for="Contrasena">Contraseña</label>
+                <input asp-for="Contrasena" type="password"
+                       placeholder="Mínimo 8 caracteres" />
+                <span asp-validation-for="Contrasena"></span>
+            </div>
+
+            <div class="register-field">
+                <label asp-for="ConfirmarContrasena">
+                    Confirmar contraseña
+                </label>
+                <input asp-for="ConfirmarContrasena" type="password" />
+                <span asp-validation-for="ConfirmarContrasena"></span>
+            </div>
+
+        </div>
+
+        <h2>Ubicación</h2>
+
+        <div class="register-grid">
+
+            <div class="register-field">
+                <label asp-for="IdProvincia">Provincia</label>
+
+                <select asp-for="IdProvincia" id="provincia">
+                    <option value="">Selecciona una provincia</option>
+
+                    @foreach (var provincia in ViewBag.Provincias)
+                    {
+                        <option value="@provincia.IdProvincia">
+                            @provincia.Nombre
+                        </option>
+                    }
+                </select>
+
+                <span asp-validation-for="IdProvincia"></span>
+            </div>
+
+            <div class="register-field">
+                <label asp-for="IdCanton">Cantón</label>
+
+                <select asp-for="IdCanton" id="canton" disabled>
+                    <option value="">Selecciona un cantón</option>
+                </select>
+
+                <span asp-validation-for="IdCanton"></span>
+            </div>
+
+            <div class="register-field">
+                <label asp-for="IdDistrito">Distrito</label>
+
+                <select asp-for="IdDistrito" id="distrito" disabled>
+                    <option value="">Selecciona un distrito</option>
+                </select>
+
+                <span asp-validation-for="IdDistrito"></span>
+            </div>
+
+            <div class="register-field register-full">
+                <label asp-for="DireccionExacta">Dirección exacta</label>
+
+                <input asp-for="DireccionExacta"
+                       placeholder="Describe tu ubicación" />
+
+                <span asp-validation-for="DireccionExacta"></span>
+            </div>
+
+        </div>
+
+        <h2>Ubicación aproximada en el mapa</h2>
+
+        <p class="register-map-info">
+            Selecciona tu ubicación en el mapa para obtener las coordenadas.
+            Puedes mover el marcador para ajustar la ubicación.
+        </p>
+
+        <div id="register-map"></div>
+
+        <div class="register-grid coordinates-grid">
+
+            <div class="register-field">
+                <label asp-for="Latitud">Latitud</label>
+                <input asp-for="Latitud" id="latitud" readonly />
+                <span asp-validation-for="Latitud"></span>
+            </div>
+
+            <div class="register-field">
+                <label asp-for="Longitud">Longitud</label>
+                <input asp-for="Longitud" id="longitud" readonly />
+                <span asp-validation-for="Longitud"></span>
+            </div>
+
+        </div>
+
+        <div class="register-vehicle">
+            <input asp-for="TieneVehiculo" type="checkbox" />
+
+            <label asp-for="TieneVehiculo">
+                Dispongo de vehículo propio
+            </label>
+        </div>
+
+        <div class="register-submit">
+            <button type="submit" class="btn-register-submit">
+                Crear mi cuenta
+            </button>
+        </div>
+
+    </form>
+
+</div>
+
+@section Scripts {
+
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        // Selectores de provincia, cantón y distrito
+
+        const provincia = document.getElementById("provincia");
+        const canton = document.getElementById("canton");
+        const distrito = document.getElementById("distrito");
+
+        provincia.addEventListener("change", async function () {
+
+            canton.innerHTML =
+                '<option value="">Selecciona un cantón</option>';
+
+            distrito.innerHTML =
+                '<option value="">Selecciona un distrito</option>';
+
+            canton.disabled = true;
+            distrito.disabled = true;
+
+            if (!this.value) return;
+
+            const response = await fetch(
+                `/Cuenta/ObtenerCantones?provinciaId=${this.value}`
+            );
+
+            const datos = await response.json();
+
+            datos.forEach(item => {
+                canton.add(new Option(item.nombre, item.id));
+            });
+
+            canton.disabled = false;
+        });
+
+        canton.addEventListener("change", async function () {
+
+            distrito.innerHTML =
+                '<option value="">Selecciona un distrito</option>';
+
+            distrito.disabled = true;
+
+            if (!this.value) return;
+
+            const response = await fetch(
+                `/Cuenta/ObtenerDistritos?cantonId=${this.value}`
+            );
+
+            const datos = await response.json();
+
+            datos.forEach(item => {
+                distrito.add(new Option(item.nombre, item.id));
+            });
+
+            distrito.disabled = false;
+        });
+
+        // Google Maps
+
+        window.initRegisterMap = function () {
+
+            const ubicacionInicial = {
+                lat: 9.9281,
+                lng: -84.0907
+            };
+
+            const mapa = new google.maps.Map(
+                document.getElementById("register-map"),
+                {
+                    center: ubicacionInicial,
+                    zoom: 8,
+                    mapTypeControl: false,
+                    streetViewControl: false,
+                    fullscreenControl: true
+                }
+            );
+
+            const marcador = new google.maps.Marker({
+                position: ubicacionInicial,
+                map: mapa,
+                draggable: true,
+                title: "Selecciona tu ubicación"
+            });
+
+            const latitud = document.getElementById("latitud");
+            const longitud = document.getElementById("longitud");
+
+            function actualizarCoordenadas(posicion) {
+
+                latitud.value = posicion.lat().toFixed(7);
+                longitud.value = posicion.lng().toFixed(7);
+            }
+
+            // Seleccionar ubicación haciendo clic
+
+            mapa.addListener("click", function (evento) {
+
+                marcador.setPosition(evento.latLng);
+
+                actualizarCoordenadas(evento.latLng);
+            });
+
+            // Cambiar ubicación arrastrando el marcador
+
+            marcador.addListener("dragend", function () {
+
+                actualizarCoordenadas(marcador.getPosition());
+            });
+
+            // Coordenadas iniciales
+
+            actualizarCoordenadas(marcador.getPosition());
+        };
+
+    </script>
+
+    <!-- Cargar Google Maps -->
+
+    <script async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOEO1WzwOVmJqYcD4UWxazEOOW66vnQ-0&callback=initRegisterMap&loading=async">
+    </script>
+
+}
