@@ -1,22 +1,35 @@
 
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using PuraRuta.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Servicios MVC
 builder.Services.AddControllersWithViews();
 
-// Database connection
+// Conexión a SQL Server
 builder.Services.AddDbContext<PuraRutaContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("PuraRutaConnection")
     )
 );
 
+// Autenticación mediante cookies
+builder.Services.AddAuthentication(
+    CookieAuthenticationDefaults.AuthenticationScheme
+)
+.AddCookie(options =>
+{
+    options.LoginPath = "/Cuenta/Login";
+    options.AccessDeniedPath = "/Cuenta/Login";
+    options.ExpireTimeSpan = TimeSpan.FromHours(8);
+    options.SlidingExpiration = true;
+});
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configuración del entorno
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -26,6 +39,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapStaticAssets();

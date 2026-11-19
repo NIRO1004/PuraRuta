@@ -1,0 +1,88 @@
+﻿@model PuraRuta.ViewModels.LoginViewModel
+
+@{
+    ViewData["Title"] = "Iniciar sesión";
+}
+
+<div class="login-container">
+
+    <div class="login-heading">
+        <h1>¡Bienvenido a <span>PuraRuta</span>!</h1>
+        <p>Ingresa a tu cuenta y continúa descubriendo Costa Rica.</p>
+    </div>
+
+    <div class="login-card">
+
+        <div class="login-icon">
+            🌿
+        </div>
+
+        <h2>Iniciar sesión</h2>
+
+        <p class="login-description">
+            Accede con tus credenciales.
+        </p>
+
+        <form asp-controller="Cuenta"
+              asp-action="Login"
+              method="post">
+
+            @Html.AntiForgeryToken()
+
+            <div asp-validation-summary="ModelOnly"
+                 class="login-error">
+            </div>
+
+            <div class="login-field">
+                <label asp-for="Correo">Correo electrónico</label>
+
+                <input asp-for="Correo"
+                       type="email"
+                       placeholder="correo@ejemplo.com" />
+
+                <span asp-validation-for="Correo"
+                      class="login-error">
+                </span>
+            </div>
+
+            <div class="login-field">
+                <label asp-for="Contrasena">Contraseña</label>
+
+                <input asp-for="Contrasena"
+                       type="password"
+                       placeholder="Ingresa tu contraseña" />
+
+                <span asp-validation-for="Contrasena"
+                      class="login-error">
+                </span>
+            </div>
+
+            @if (ViewBag.Error != null)
+            {
+                <div class="login-error">
+                    @ViewBag.Error
+                </div>
+            }
+
+            <button type="submit" class="btn-login-submit">
+                Iniciar sesión
+            </button>
+
+        </form>
+
+        <div class="login-register">
+            ¿Todavía no tienes cuenta?
+
+            <a asp-controller="Cuenta"
+               asp-action="Registro">
+                Regístrate aquí
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

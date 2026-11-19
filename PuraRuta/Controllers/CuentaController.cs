@@ -5,6 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using PuraRuta.Data;
 using PuraRuta.Models;
 using PuraRuta.ViewModels;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace PuraRuta.Controllers
 {
@@ -161,6 +164,68 @@ namespace PuraRuta.Controllers
                 await CargarProvincias();
                 return View(model);
             }
+        }
+
+        // Mostrar formulario de inicio de sesión
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(LoginViewModel model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            var usuario = await _context.Usuarios
+                .Include(u => u.IdRolNavigation)
+                .FirstOrDefaultAsync(u =>
+                    u.Correo == model.Correo && u.Estado);
+
+            if (usuario == null)
+            {
+                ViewBag.Error = "Correo o contraseña incorrectos.";
+                return View(model);
+            }
+
+            var passwordHasher = new PasswordHasher<Usuario>();
+
+            var resultado = passwordHasher.VerifyHashedPassword(
+                usuario,
+                usuario.ContrasenaHash,
+                model.Contrasena
+            );
+
+            if (resultado == PasswordVerificationResult.Failed)
+            {
+                ViewBag.Error = "Correo o contraseña incorrectos.";
+                return View(model);
+            }
+
+            var claims = new List<Claim>
+    {
+        new Claim(ClaimTypes.NameIdentifier, usuario.IdUsuario.ToString()),
+        new Claim(ClaimTypes.Name, usuario.Nombre),
+        new Claim(ClaimTypes.Email, usuario.Correo),
+        new Claim(ClaimTypes.Role, usuario.IdRolNavigation.Nombre)
+    };
+
+            var identidad = new ClaimsIdentity(
+                claims,
+                CookieAuthenticationDefaults.AuthenticationScheme
+            );
+
+            var principal = new ClaimsPrincipal(identidad);
+
+            await HttpContext.SignInAsync(
+                CookieAuthenticationDefaults.AuthenticationScheme,
+                principal
+            );
+
+            return RedirectToAction("Index", "Home");
         }
 
         // Obtener cantones según la provincia
