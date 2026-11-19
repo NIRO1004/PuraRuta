@@ -1,0 +1,534 @@
+
+/* =========================================
+   PURARUTA - IDENTIDAD VISUAL
+========================================= */
+
+:root {
+    --pura-green: #087a35;
+    --pura-green-light: #00a94f;
+    --pura-turquoise: #00c9bd;
+    --pura-blue: #0875d1;
+    --pura-dark: #17212b;
+    --pura-text: #344054;
+    --pura-muted: #647184;
+    --pura-background: #f3f6fa;
+    --pura-white: #ffffff;
+}
+
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: var(--pura-background);
+    color: var(--pura-dark);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+h1, h2, h3, h4, h5 {
+    color: var(--pura-dark);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================================
+   NAVBAR PURARUTA
+========================================= */
+
+.navbar-puraruta {
+    position: relative;
+    overflow: hidden;
+    padding: 14px 0;
+    background: linear-gradient( 110deg, #168b20 0%, #087a35 45%, #005c38 100% );
+}
+
+    /* Decoración suave del extremo derecho */
+
+    .navbar-puraruta::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 210px;
+        height: 100%;
+        background: linear-gradient( 145deg, transparent 35%, rgba(0, 201, 189, 0.75) 36%, rgba(0, 201, 189, 0.75) 65%, rgba(8, 117, 209, 0.85) 66% );
+        clip-path: ellipse(85% 100% at 100% 100%);
+        pointer-events: none;
+    }
+
+    .navbar-puraruta .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    /* LOGOTIPO */
+
+    .navbar-puraruta .navbar-brand {
+        color: white !important;
+        font-size: 27px;
+        font-weight: 800;
+        letter-spacing: -1px;
+    }
+
+.brand-symbol {
+    font-size: 29px;
+    margin-right: 5px;
+}
+
+/* Imagen del logotipo */
+
+.logo-navbar {
+    width: 190px;
+    height: 55px;
+    object-fit: contain;
+}
+
+/* ENLACES */
+
+.navbar-puraruta .navbar-nav .nav-link {
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 15px !important;
+    border-radius: 9px;
+    transition: background-color 0.2s ease;
+}
+
+    .navbar-puraruta .navbar-nav .nav-link:hover,
+    .navbar-puraruta .navbar-nav .nav-link.active {
+        color: white;
+        background-color: rgba(255, 255, 255, 0.16);
+    }
+
+/* BOTÓN INICIAR SESIÓN */
+
+.navbar-puraruta .btn-login {
+    background-color: white;
+    border: 1px solid white;
+    color: var(--pura-dark) !important;
+    font-weight: 700;
+}
+
+    .navbar-puraruta .btn-login:hover {
+        background-color: #eaf5ef;
+        border-color: #eaf5ef;
+        color: var(--pura-green) !important;
+    }
+
+/* BOTÓN REGISTRARSE */
+
+.navbar-puraruta .btn-register {
+    background-color: var(--pura-turquoise);
+    border: 1px solid var(--pura-turquoise);
+    color: #003b3a !important;
+    font-weight: 700;
+}
+
+    .navbar-puraruta .btn-register:hover {
+        background-color: #27d8ca;
+        border-color: #27d8ca;
+        color: #003b3a !important;
+    }
+
+/* MENÚ RESPONSIVE */
+
+.navbar-puraruta .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.navbar-puraruta .navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* =========================================
+   PÁGINA PRINCIPAL
+========================================= */
+
+.home-container {
+    width: 100%;
+    max-width: 1410px;
+    margin: 0 auto;
+    padding: 42px 30px 55px;
+}
+
+/* BIENVENIDA */
+
+.home-welcome {
+    margin-bottom: 27px;
+}
+
+    .home-welcome h1 {
+        font-size: 46px;
+        font-weight: 800;
+        letter-spacing: -1.5px;
+        margin-bottom: 10px;
+    }
+
+        .home-welcome h1 span {
+            color: var(--pura-green);
+        }
+
+    .home-welcome p {
+        font-size: 18px;
+        color: var(--pura-text);
+        margin: 0;
+    }
+
+/* =========================================
+   TARJETAS PRINCIPALES
+========================================= */
+
+.home-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 27px;
+    margin-bottom: 34px;
+}
+
+.feature-card {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    min-height: 205px;
+    padding: 28px 22px;
+    background-color: white;
+    border: 1px solid #e5eaf0;
+    border-top: 6px solid var(--pura-green-light);
+    border-radius: 17px;
+    box-shadow: 0 8px 20px rgba(20, 45, 70, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .feature-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 24px rgba(20, 45, 70, 0.12);
+    }
+
+    .feature-card.planificar {
+        border-top-color: var(--pura-turquoise);
+    }
+
+    .feature-card.reservar {
+        border-top-color: var(--pura-blue);
+    }
+
+/* ICONOS */
+
+.feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 74px;
+    height: 74px;
+    border-radius: 17px;
+    background-color: #e9f9ef;
+    color: var(--pura-green);
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.planificar .feature-icon {
+    background-color: #e5f8fb;
+    color: #009bd0;
+}
+
+.reservar .feature-icon {
+    background-color: #e8f8ef;
+    color: var(--pura-green);
+}
+
+/* CONTENIDO DE TARJETAS */
+
+.feature-content {
+    flex: 1;
+}
+
+    .feature-content h3 {
+        font-size: 24px;
+        margin: 0 0 9px;
+    }
+
+    .feature-content p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--pura-text);
+        margin-bottom: 17px;
+    }
+
+/* BOTONES DE TARJETAS */
+
+.btn-feature {
+    display: inline-block;
+    padding: 10px 23px;
+    border-radius: 11px;
+    color: white;
+    font-weight: 700;
+    border: none;
+    transition: opacity 0.2s ease;
+}
+
+    .btn-feature:hover {
+        color: white;
+        opacity: 0.88;
+    }
+
+.btn-explore {
+    background-color: var(--pura-green-light);
+}
+
+.btn-plan {
+    background-color: #00b9c5;
+}
+
+.btn-reserve {
+    background-color: var(--pura-blue);
+}
+
+/* =========================================
+   SECCIÓN DESCUBRE COSTA RICA
+========================================= */
+
+.discover-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    min-height: 120px;
+    padding: 22px 32px;
+    overflow: hidden;
+    background: linear-gradient( 110deg, #ffffff 0%, #ffffff 65%, #e8fbf6 100% );
+    border: 1px solid #e5eaf0;
+    border-radius: 17px;
+    box-shadow: 0 8px 20px rgba(20, 45, 70, 0.07);
+}
+
+.discover-icon {
+    position: relative;
+    z-index: 2;
+    color: var(--pura-green);
+    font-size: 43px;
+    font-weight: bold;
+}
+
+.discover-content {
+    position: relative;
+    z-index: 2;
+}
+
+    .discover-content h3 {
+        font-size: 23px;
+        margin-bottom: 6px;
+    }
+
+    .discover-content p {
+        color: var(--pura-text);
+        font-size: 16px;
+        margin: 0;
+    }
+
+/* DECORACIÓN SUAVE */
+
+.discover-card::after {
+    content: "";
+    position: absolute;
+    right: -25px;
+    bottom: -35px;
+    width: 36%;
+    height: 115%;
+    background: linear-gradient( 145deg, rgba(0, 201, 189, 0.12) 0%, rgba(0, 201, 189, 0.3) 48%, rgba(8, 117, 209, 0.85) 100% );
+    clip-path: ellipse(75% 55% at 75% 75%);
+}
+
+/* =========================================
+   FOOTER PURARUTA
+========================================= */
+
+.footer-puraruta {
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    padding: 25px 0;
+    margin-top: 35px;
+    background: linear-gradient( 110deg, #168b20 0%, #087a35 45%, #005c38 100% );
+    color: white;
+}
+
+    /* CONTENIDO SOBRE LAS DECORACIONES */
+
+    .footer-puraruta .container {
+        position: relative;
+        z-index: 2;
+    }
+
+/* LOGOTIPO FOOTER */
+
+.logo-footer {
+    width: 180px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.footer-brand {
+    display: inline-block;
+    border-right: 2px solid rgba(255, 255, 255, 0.8);
+    padding-right: 28px;
+}
+
+    .footer-brand:hover {
+        color: white;
+    }
+
+/* TEXTOS FOOTER */
+
+.footer-message,
+.footer-copyright {
+    color: white;
+    font-size: 16px;
+}
+
+/* DECORACIONES CURVAS DEL FOOTER */
+
+.footer-puraruta::before,
+.footer-puraruta::after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    width: 210px;
+    height: 100px;
+    pointer-events: none;
+}
+
+.footer-puraruta::before {
+    left: -20px;
+    background: linear-gradient( 145deg, var(--pura-turquoise) 0%, var(--pura-turquoise) 48%, var(--pura-blue) 49%, var(--pura-blue) 100% );
+    clip-path: ellipse(75% 65% at 20% 85%);
+}
+
+.footer-puraruta::after {
+    right: -20px;
+    background: linear-gradient( 145deg, var(--pura-turquoise) 0%, var(--pura-turquoise) 48%, var(--pura-blue) 49%, var(--pura-blue) 100% );
+    clip-path: ellipse(75% 65% at 80% 85%);
+}
+
+/* =========================================
+   DISEÑO RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+
+    .navbar-puraruta::after {
+        width: 130px;
+        opacity: 0.5;
+    }
+
+    .navbar-puraruta .navbar-nav {
+        padding: 15px 0;
+    }
+
+    .navbar-puraruta .d-flex {
+        padding-bottom: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .home-container {
+        padding: 30px 18px 40px;
+    }
+
+    .home-welcome h1 {
+        font-size: 34px;
+    }
+
+    .home-welcome p {
+        font-size: 16px;
+    }
+
+    .home-features {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .feature-card {
+        min-height: 175px;
+        padding: 22px 18px;
+    }
+
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+
+    .feature-content h3 {
+        font-size: 21px;
+    }
+
+    .discover-card {
+        padding: 22px 18px;
+        gap: 15px;
+    }
+
+    .discover-content h3 {
+        font-size: 20px;
+    }
+
+    .discover-content p {
+        font-size: 14px;
+    }
+
+    .discover-card::after {
+        width: 25%;
+        opacity: 0.5;
+    }
+
+    .footer-puraruta {
+        padding: 28px 0;
+    }
+
+    .footer-brand {
+        border-right: none;
+        padding-right: 0;
+        margin-bottom: 12px;
+    }
+
+    .footer-message,
+    .footer-copyright {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .logo-navbar {
+        width: 155px;
+        height: 48px;
+    }
+
+    .logo-footer {
+        width: 160px;
+        height: 48px;
+    }
+
+    .footer-puraruta::before,
+    .footer-puraruta::after {
+        width: 100px;
+        height: 60px;
+        opacity: 0.7;
+    }
+}

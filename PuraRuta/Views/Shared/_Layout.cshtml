@@ -1,0 +1,149 @@
+﻿
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] - PuraRuta</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PuraRuta.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-puraruta shadow-sm">
+            <div class="container">
+
+                <!-- LOGOTIPO -->
+                <a class="navbar-brand"
+                   asp-controller="Home"
+                   asp-action="Index">
+
+                    <img src="~/ima/logo.png"
+                         alt="PuraRuta"
+                         class="logo-navbar" />
+
+                </a>
+
+                <!-- MENÚ RESPONSIVE -->
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#menuPrincipal"
+                        aria-controls="menuPrincipal"
+                        aria-expanded="false"
+                        aria-label="Abrir menú">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <!-- OPCIONES DE NAVEGACIÓN -->
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                    <ul class="navbar-nav mx-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               asp-controller="Home"
+                               asp-action="Index">
+                                Inicio
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Catálogo
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Mapa
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Recomendaciones
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <!-- ACCESO DE USUARIOS -->
+                    <div class="d-flex gap-2 align-items-center">
+
+                        <a href="#" class="btn btn-login">
+                            Iniciar sesión
+                        </a>
+
+                        <a href="#" class="btn btn-register">
+                            Registrarse
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO DE LAS VISTAS -->
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer-puraruta">
+        <div class="container">
+            <div class="row align-items-center text-center text-lg-start">
+
+                <!-- LOGOTIPO -->
+                <div class="col-lg-3 mb-3 mb-lg-0">
+                    <a class="footer-brand"
+                       asp-controller="Home"
+                       asp-action="Index">
+
+                        <img src="~/ima/logo.png"
+                             alt="PuraRuta"
+                             class="logo-footer" />
+
+                    </a>
+                </div>
+
+                <!-- MENSAJE -->
+                <div class="col-lg-5 mb-3 mb-lg-0 text-center">
+                    <span>
+                        Descubre Costa Rica, vive nuevas experiencias.
+                    </span>
+                </div>
+
+                <!-- DERECHOS RESERVADOS -->
+                <div class="col-lg-4 text-center text-lg-end">
+                    <small>
+                        &copy; 2026 PuraRuta. Todos los derechos reservados.
+                    </small>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- SCRIPTS -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>
