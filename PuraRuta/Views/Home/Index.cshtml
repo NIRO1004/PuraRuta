@@ -31,7 +31,7 @@
                     Descubre experiencias turísticas en todo el país.
                 </p>
 
-                <a href="#" class="btn-feature btn-explore">
+                <a class="btn-feature btn-explore" asp-controller="Mapa" asp-action="Index">
                     Ver catálogo
                 </a>
             </div>
@@ -81,6 +81,27 @@
         </article>
 
     </section>
+
+    @if (User.Identity != null &&
+     User.Identity.IsAuthenticated &&
+     User.IsInRole("Administrador"))
+    {
+        <div class="admin-access-card">
+            <div>
+                <h3>Administración de comunidades</h3>
+                <p>
+                    Registra, modifica y administra las comunidades
+                    disponibles en PuraRuta.
+                </p>
+            </div>
+
+            <a asp-controller="AdministracionComunidades"
+               asp-action="Index"
+               class="btn btn-success">
+                Administrar comunidades
+            </a>
+        </div>
+    }
 
     <!-- DESCUBRE COSTA RICA -->
     <section class="discover-card">

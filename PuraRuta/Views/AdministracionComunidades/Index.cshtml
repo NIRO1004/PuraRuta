@@ -1,114 +1,62 @@
 ﻿@model IEnumerable<PuraRuta.Models.Comunidad>
-
 @{
     ViewData["Title"] = "Administración de comunidades";
 }
-
 <div class="container py-4">
-
     <div class="d-flex justify-content-between align-items-center mb-4">
         <div>
             <h2>Administración de comunidades</h2>
             <p class="text-muted">Gestiona las comunidades registradas en PuraRuta.</p>
         </div>
-
-        <a asp-action="Crear" class="btn btn-success">
-            <i class="bi bi-plus-circle"></i> Nueva comunidad
-        </a>
+        <a asp-action="Crear" class="btn btn-success"><i class="bi bi-plus-circle"></i> Nueva comunidad</a>
     </div>
+
+    @if (TempData["ComunidadCreada"] != null) { <div class="alert alert-success">@TempData["ComunidadCreada"]</div> }
+    @if (TempData["ComunidadActualizada"] != null) { <div class="alert alert-success">@TempData["ComunidadActualizada"]</div> }
+    @if (TempData["EstadoComunidad"] != null) { <div class="alert alert-info">@TempData["EstadoComunidad"]</div> }
 
     @if (!Model.Any())
     {
-        <div class="alert alert-info">
-            Todavía no hay comunidades registradas.
-        </div>
+        <div class="alert alert-info">Todavía no hay comunidades registradas.</div>
     }
     else
     {
         <div class="table-responsive">
             <table class="table table-hover align-middle">
-                <thead class="table-success">
-                    <tr>
-                        <th>Fotografía</th>
-                        <th>Comunidad</th>
-                        <th>Provincia</th>
-                        <th>Cantón</th>
-                        <th>Distrito</th>
-                        <th>Estado</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-
+                <thead class="table-success"><tr>
+                    <th>Fotografía</th><th>Comunidad</th><th>Provincia</th><th>Cantón</th><th>Distrito</th><th>Estado</th><th>Acciones</th>
+                </tr></thead>
                 <tbody>
-                    @foreach (var comunidad in Model)
-                    {
-                        var fotografia = comunidad.FotoComunidads
-                            .FirstOrDefault()?.RutaImagen;
-
-                        <tr>
-                            <td>
-                                @if (!string.IsNullOrEmpty(fotografia))
-                                {
-                                    <img src="@fotografia"
-                                         alt="@comunidad.Nombre"
-                                         style="width:75px;height:55px;object-fit:cover;border-radius:8px;" />
-                                }
-                                else
-                                {
-                                    <span class="text-muted">Sin foto</span>
-                                }
-                            </td>
-
-                            <td>
-                                <strong>@comunidad.Nombre</strong>
-                            </td>
-
-                            <td>
-                                @comunidad.IdDireccionNavigation
-                                .IdDistritoNavigation
-                                .IdCantonNavigation
-                                .IdProvinciaNavigation.Nombre
-                            </td>
-
-                            <td>
-                                @comunidad.IdDireccionNavigation
-                                .IdDistritoNavigation
-                                .IdCantonNavigation.Nombre
-                            </td>
-
-                            <td>
-                                @comunidad.IdDireccionNavigation
-                                .IdDistritoNavigation.Nombre
-                            </td>
-
-                            <td>
-                                @if (comunidad.Estado)
-                                {
-                                    <span class="badge bg-success">Activa</span>
-                                }
-                                else
-                                {
-                                    <span class="badge bg-secondary">Inactiva</span>
-                                }
-                            </td>
-
-                            <td>
-                                <div class="d-flex gap-2">
-                                    <a asp-action="Editar"
-                                       asp-route-id="@comunidad.IdComunidad"
-                                       class="btn btn-sm btn-outline-primary">
-                                        Editar
-                                    </a>
-
-                                    <a asp-action="CambiarEstado"
-                                       asp-route-id="@comunidad.IdComunidad"
-                                       class="btn btn-sm btn-outline-danger">
+                @foreach (var comunidad in Model)
+                {
+                    var foto = comunidad.FotoComunidads.FirstOrDefault()?.RutaImagen;
+                    <tr>
+                        <td>
+                            @if (!string.IsNullOrWhiteSpace(foto))
+                            { <img src="@foto" alt="@comunidad.Nombre" style="width:75px;height:55px;object-fit:cover;border-radius:8px;" /> }
+                            else { <span class="text-muted">Sin fotografía</span> }
+                        </td>
+                        <td><strong>@comunidad.Nombre</strong></td>
+                        <td>@comunidad.IdDireccionNavigation.IdDistritoNavigation.IdCantonNavigation.IdProvinciaNavigation.Nombre</td>
+                        <td>@comunidad.IdDireccionNavigation.IdDistritoNavigation.IdCantonNavigation.Nombre</td>
+                        <td>@comunidad.IdDireccionNavigation.IdDistritoNavigation.Nombre</td>
+                        <td>
+                            @if (comunidad.Estado) { <span class="badge bg-success">Activa</span> }
+                            else { <span class="badge bg-secondary">Inactiva</span> }
+                        </td>
+                        <td>
+                            <div class="d-flex flex-wrap gap-2">
+                                <a asp-action="Editar" asp-route-id="@comunidad.IdComunidad" class="btn btn-sm btn-outline-primary">Editar</a>
+                                <form asp-action="CambiarEstado" asp-route-id="@comunidad.IdComunidad" method="post" class="m-0" onsubmit="return confirm('¿Deseas @(comunidad.Estado ? "desactivar" : "activar") esta comunidad?');">
+                                    @Html.AntiForgeryToken()
+                                    <button type="submit" class="btn btn-sm @(comunidad.Estado ? "btn-outline-danger" : "btn-outline-success")">
                                         @(comunidad.Estado ? "Desactivar" : "Activar")
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                    }
+                                    </button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                }
                 </tbody>
             </table>
         </div>

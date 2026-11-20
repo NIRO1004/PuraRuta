@@ -13,6 +13,7 @@ namespace PuraRuta.ViewModels
         public string Nombre { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "La descripción es obligatoria.")]
+        [StringLength(500, ErrorMessage = "Máximo 500 caracteres.")]
         public string DescripcionComunidad { get; set; } = string.Empty;
 
         [Required]
@@ -38,8 +39,10 @@ namespace PuraRuta.ViewModels
 
         public bool Estado { get; set; } = true;
 
-        public List<IFormFile> Fotografias { get; set; } = new();
+        public List<IFormFile>? Fotografias { get; set; } = new();
 
         public List<string> FotografiasExistentes { get; set; } = new();
+
+
     }
 }
