@@ -64,8 +64,7 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
-C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\wwwroot\js\site.js
-C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\wwwroot\lib\jquery\LICENSE.txt
+C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\wwwroot\favicon.ico
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\wwwroot\lib\jquery\dist\jquery.slim.min.map
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\wwwroot\lib\jquery\dist\jquery.slim.min.js
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\wwwroot\lib\jquery\dist\jquery.slim.js
@@ -124,5 +123,6 @@ C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\wwwroot\lib\bootstrap\dist\css
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
-C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\wwwroot\favicon.ico
+C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\wwwroot\js\site.js
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\wwwroot\css\site.css
+C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\wwwroot\lib\jquery\LICENSE.txt

@@ -1,0 +1,110 @@
+﻿@using System.Linq
+
+@model IEnumerable<dynamic>
+
+@{
+    ViewData["Title"] = "Mis recomendaciones";
+}
+
+<div class="catalog-container">
+
+    <section class="catalog-header">
+        <span class="catalog-tag">RECOMENDACIONES PERSONALIZADAS</span>
+        <h1>Experiencias para ti</h1>
+        <p>Descubre experiencias seleccionadas según tus intereses, ubicación y preferencias.</p>
+    </section>
+
+    <section class="catalog-content">
+
+        @if (!Model.Any())
+        {
+            <div class="alert alert-info">
+                No encontramos experiencias para recomendarte por el momento.
+            </div>
+        }
+        else
+        {
+            <div class="catalog-results">
+                <p>Encontramos <strong>@Model.Count()</strong> experiencias recomendadas para ti.</p>
+            </div>
+
+            <div class="catalog-grid">
+
+                @foreach (var recomendacion in Model)
+                {
+                    var experiencia = recomendacion.Experiencia;
+
+                    <article class="experience-card">
+
+                        <div class="experience-cover">
+
+                            @if (experiencia.FotoExperiencia.Count > 0)
+                            {
+                                <img src="@experiencia.FotoExperiencia[0].RutaImagen"
+                                     alt="@experiencia.Nombre"
+                                     class="experience-image" />
+                            }
+                            else
+                            {
+                                <span class="cover-label">PuraRuta</span>
+                            }
+
+                        </div>
+
+                        <div class="experience-body">
+
+                            <span class="experience-category">
+                                @experiencia.IdCategoriaNavigation.Nombre
+                            </span>
+
+                            <h3>@experiencia.Nombre</h3>
+
+                            <p class="experience-description">
+                                @experiencia.DescripcionExperiencia
+                            </p>
+
+                            <p class="experience-community">
+                                <strong>Comunidad:</strong>
+                                @experiencia.IdComunidadNavigation.Nombre
+                            </p>
+
+                            <div class="experience-details">
+                                <span>Edad mínima: @experiencia.EdadMinima años</span>
+                                <span>Dificultad: @experiencia.Dificultad</span>
+                                <span>Duración: @experiencia.DuracionHoras horas</span>
+                                <span>Distancia: @recomendacion.Distancia km</span>
+                            </div>
+
+                            <div class="recommendation-reasons">
+                                <strong>¿Por qué te recomendamos esta experiencia?</strong>
+
+                                <ul>
+                                    @foreach (var motivo in recomendacion.Motivos)
+                                    {
+                                        <li>@motivo</li>
+                                    }
+                                </ul>
+                            </div>
+
+                            <div class="experience-footer">
+                                <span class="experience-price">
+                                    ₡@experiencia.Precio.ToString("N0")
+                                </span>
+
+                                <a asp-controller="Catalogo"
+                                   asp-action="Detalles"
+                                   asp-route-id="@experiencia.IdExperiencia"
+                                   class="btn-experience">
+                                    Ver detalles
+                                </a>
+                            </div>
+
+                        </div>
+                    </article>
+                }
+
+            </div>
+        }
+
+    </section>
+</div>
