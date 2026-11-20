@@ -80,48 +80,59 @@
                     <!-- ACCESO DE USUARIOS -->
                     <div class="d-flex gap-2 align-items-center">
 
+                        
+                        
                         @if (User.Identity != null && User.Identity.IsAuthenticated)
                         {
-                            @if (User.IsInRole("Administrador"))
-                            {
-                                <span class="text-white">
-                                    Administrador
-                                </span>
-                            }
-                            else if (User.IsInRole("Turista"))
-                            {
-                                <span class="text-white">
-                                    Hola, @User.Identity.Name
-                                </span>
-                            }
+                            <div class="navbar-user-actions">
 
-                            <form asp-controller="Cuenta"
-                                  asp-action="Logout"
-                                  method="post"
-                                  class="m-0">
+                                @if (User.IsInRole("Administrador"))
+                                {
+                                    <span class="navbar-greeting">Administrador</span>
+                                }
+                                else if (User.IsInRole("Turista"))
+                                {
+                                    <span class="navbar-greeting">
+                                        Hola, @User.Identity.Name
+                                    </span>
 
-                                @Html.AntiForgeryToken()
+                                    <a asp-controller="Perfil"
+                                       asp-action="Index"
+                                       class="btn btn-perfil">
+                                        <i class="bi bi-person-circle"></i>
+                                        Mi perfil
+                                    </a>
+                                }
 
-                                <button type="submit" class="btn btn-login">
-                                    Cerrar sesión
-                                </button>
+                                <form asp-controller="Cuenta"
+                                      asp-action="Logout"
+                                      method="post"
+                                      class="m-0">
+                                    @Html.AntiForgeryToken()
 
-                            </form>
+                                    <button type="submit" class="btn btn-login">
+                                        Cerrar sesión
+                                    </button>
+                                </form>
+
+                            </div>
                         }
                         else
                         {
-                            <a class="btn btn-login"
-                               asp-controller="Cuenta"
-                               asp-action="Login">
+                            <a asp-controller="Cuenta"
+                               asp-action="Login"
+                               class="btn btn-login">
                                 Iniciar sesión
                             </a>
 
-                            <a class="btn btn-register"
-                               asp-controller="Cuenta"
-                               asp-action="Registro">
+                            <a asp-controller="Cuenta"
+                               asp-action="Registro"
+                               class="btn btn-register">
                                 Registrarse
                             </a>
                         }
+
+
 
                     </div>
 

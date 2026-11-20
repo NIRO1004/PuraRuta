@@ -1,0 +1,285 @@
+﻿@using PuraRuta.ViewModels
+@model PerfilViewModel
+
+@{
+    ViewData["Title"] = "Mi perfil";
+}
+
+<div class="catalog-container">
+
+    <section class="catalog-header">
+        <span class="catalog-tag">MI CUENTA</span>
+        <h1>Mi perfil</h1>
+        <p>Administra tu información personal y tus preferencias de viaje.</p>
+    </section>
+
+    <section class="catalog-content">
+
+        @if (TempData["PerfilActualizado"] != null)
+        {
+            <div class="alert alert-success">
+                @TempData["PerfilActualizado"]
+            </div>
+        }
+
+        <form asp-controller="Perfil" asp-action="Index" method="post">
+            @Html.AntiForgeryToken()
+
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <div class="form-section">
+                <h3>Datos personales</h3>
+
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <label asp-for="Nombre" class="form-label">Nombre</label>
+                        <input asp-for="Nombre" class="form-control" />
+                        <span asp-validation-for="Nombre" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label asp-for="Apellido1" class="form-label">Primer apellido</label>
+                        <input asp-for="Apellido1" class="form-control" />
+                        <span asp-validation-for="Apellido1" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label asp-for="Apellido2" class="form-label">Segundo apellido</label>
+                        <input asp-for="Apellido2" class="form-control" />
+                        <span asp-validation-for="Apellido2" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="Correo" class="form-label">Correo electrónico</label>
+                        <input asp-for="Correo" class="form-control" />
+                        <span asp-validation-for="Correo" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="Telefono" class="form-label">Teléfono</label>
+                        <input asp-for="Telefono" class="form-control" />
+                        <span asp-validation-for="Telefono" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="FechaNacimiento" class="form-label">Fecha de nacimiento</label>
+                        <input asp-for="FechaNacimiento" type="date" class="form-control" />
+                        <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section mt-4">
+                <h3>Ubicación y dirección</h3>
+
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <label class="form-label">Provincia</label>
+                        <select asp-for="IdProvincia" id="IdProvincia" class="form-select">
+                            <option value="">Seleccione una provincia</option>
+                            @foreach (var provincia in ViewBag.Provincias)
+                            {
+                                <option value="@provincia.IdProvincia">@provincia.Nombre</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">Cantón</label>
+                        <select asp-for="IdCanton" id="IdCanton" class="form-select">
+                            <option value="">Seleccione un cantón</option>
+                            @foreach (var canton in ViewBag.Cantones)
+                            {
+                                <option value="@canton.IdCanton">@canton.Nombre</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">Distrito</label>
+                        <select asp-for="IdDistrito" id="IdDistrito" class="form-select">
+                            <option value="">Seleccione un distrito</option>
+                            @foreach (var distrito in ViewBag.Distritos)
+                            {
+                                <option value="@distrito.IdDistrito">@distrito.Nombre</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="col-12">
+                        <label asp-for="DireccionExacta" class="form-label">Dirección exacta</label>
+                        <input asp-for="DireccionExacta" class="form-control" />
+                        <span asp-validation-for="DireccionExacta" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="Latitud" class="form-label">Latitud</label>
+                        <input asp-for="Latitud" id="Latitud" class="form-control" readonly />
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="Longitud" class="form-label">Longitud</label>
+                        <input asp-for="Longitud" id="Longitud" class="form-control" readonly />
+                    </div>
+                </div>
+
+                <p class="text-muted mt-2">
+                    Las coordenadas actuales se conservan. Si deseas cambiar tu ubicación,
+                    podrás seleccionar una nueva ubicación en el mapa.
+                </p>
+
+                <div id="mapaPerfil"></div>
+            </div>
+
+            <div class="form-section mt-4">
+                <h3>Preferencias de transporte</h3>
+
+                <div class="form-check">
+                    <input asp-for="TieneVehiculo" class="form-check-input" />
+                    <label asp-for="TieneVehiculo" class="form-check-label">
+                        Tengo vehículo propio
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-section mt-4">
+                <h3>Mis intereses</h3>
+                <p class="text-muted">
+                    Selecciona las categorías de experiencias que más te interesan.
+                </p>
+
+                <div class="row g-3">
+                    @foreach (var categoria in ViewBag.Categorias)
+                    {
+                        <div class="col-md-4">
+                            <div class="form-check">
+
+                                <input class="form-check-input"
+                                       type="checkbox"
+                                       name="CategoriasSeleccionadas"
+                                       value="@categoria.IdCategoria"
+                                       id="categoria_@categoria.IdCategoria"
+                                       checked="@(Model.CategoriasSeleccionadas.Contains(categoria.IdCategoria))" />
+
+                                <label class="form-check-label"
+                                       for="categoria_@categoria.IdCategoria">
+                                    @categoria.Nombre
+                                </label>
+
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <div class="d-flex gap-3 mt-4">
+                <button type="submit" class="btn-experience">
+                    Guardar cambios
+                </button>
+
+                <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary">
+                    Cancelar
+                </a>
+            </div>
+
+        </form>
+    </section>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        const provinciaSelect = document.getElementById("IdProvincia");
+        const cantonSelect = document.getElementById("IdCanton");
+        const distritoSelect = document.getElementById("IdDistrito");
+
+        provinciaSelect.addEventListener("change", async function () {
+            cantonSelect.innerHTML = '<option value="">Seleccione un cantón</option>';
+            distritoSelect.innerHTML = '<option value="">Seleccione un distrito</option>';
+
+            if (!this.value) return;
+
+            const respuesta = await fetch(
+                `/Cuenta/ObtenerCantones?provinciaId=${this.value}`
+            );
+
+            const cantones = await respuesta.json();
+
+            cantones.forEach(canton => {
+                cantonSelect.add(new Option(canton.nombre, canton.id));
+            });
+        });
+
+        cantonSelect.addEventListener("change", async function () {
+            distritoSelect.innerHTML = '<option value="">Seleccione un distrito</option>';
+
+            if (!this.value) return;
+
+            const respuesta = await fetch(
+                `/Cuenta/ObtenerDistritos?cantonId=${this.value}`
+            );
+
+            const distritos = await respuesta.json();
+
+            distritos.forEach(distrito => {
+                distritoSelect.add(new Option(distrito.nombre, distrito.id));
+            });
+        });
+
+        
+        window.initPerfilMap = function () {
+
+            const latitudInput = document.getElementById("Latitud");
+            const longitudInput = document.getElementById("Longitud");
+
+            const ubicacionInicial = {
+                lat: parseFloat(latitudInput.value),
+                lng: parseFloat(longitudInput.value)
+            };
+
+            const mapa = new google.maps.Map(
+                document.getElementById("mapaPerfil"),
+                {
+                    center: ubicacionInicial,
+                    zoom: 14,
+                    mapTypeControl: false,
+                    streetViewControl: false,
+                    fullscreenControl: true
+                }
+            );
+
+            const marcador = new google.maps.Marker({
+                position: ubicacionInicial,
+                map: mapa,
+                draggable: true,
+                title: "Tu ubicación"
+            });
+
+            function actualizarCoordenadas(posicion) {
+                latitudInput.value = posicion.lat().toFixed(7);
+                longitudInput.value = posicion.lng().toFixed(7);
+            }
+
+            if (!latitudInput.value || !longitudInput.value) {
+                console.error("No se encontraron las coordenadas del turista.");
+                return;
+            }
+
+            mapa.addListener("click", function (evento) {
+                marcador.setPosition(evento.latLng);
+                actualizarCoordenadas(evento.latLng);
+            });
+
+            marcador.addListener("dragend", function () {
+                actualizarCoordenadas(marcador.getPosition());
+            });
+
+        };
+
+    </script>
+
+    <script async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOEO1WzwOVmJqYcD4UWxazEOOW66vnQ-0&callback=initPerfilMap&loading=async">
+    </script>
+}
