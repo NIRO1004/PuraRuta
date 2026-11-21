@@ -36,6 +36,26 @@ namespace PuraRuta.Controllers
         }
 
 
+        [HttpGet]
+        public async Task<IActionResult> MisRutas()
+        {
+            var idUsuario = int.Parse(
+                User.FindFirstValue(ClaimTypes.NameIdentifier)!
+            );
+
+            var rutas = await _context.Ruta
+                .AsNoTracking()
+                .Where(r => r.IdTurista == idUsuario)
+                .Include(r => r.RutaExperiencia)
+                    .ThenInclude(re => re.IdExperienciaNavigation)
+                .OrderByDescending(r => r.FechaCreacion)
+                .ToListAsync();
+
+            return View(rutas);
+        }
+
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Crear(RutaViewModel modelo)

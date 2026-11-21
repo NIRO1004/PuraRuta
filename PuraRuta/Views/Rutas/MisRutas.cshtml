@@ -1,0 +1,131 @@
+﻿@model IEnumerable<PuraRuta.Models.Rutum>
+
+@{
+    ViewData["Title"] = "Mis rutas";
+}
+
+<div class="container py-5">
+
+    <div class="mb-4">
+        <h1 class="fw-bold">Mis rutas</h1>
+        <p class="text-muted">
+            Consulta las rutas que has creado y las experiencias que forman parte de cada recorrido.
+        </p>
+    </div>
+
+    @if (Model == null || !Model.Any())
+    {
+        <div class="text-center py-5">
+            <h4>Aún no tienes rutas guardadas</h4>
+            <p class="text-muted">
+                Crea tu primera ruta y organiza las experiencias que deseas visitar.
+            </p>
+
+            <a asp-controller="Rutas"
+               asp-action="Crear"
+               class="btn btn-success mt-2">
+                Crear mi primera ruta
+            </a>
+        </div>
+    }
+    else
+    {
+        <div class="row g-4">
+
+            @foreach (var ruta in Model)
+            {
+                <div class="col-12">
+                    <div class="card shadow-sm border-0 rounded-4">
+
+                        <div class="card-body p-4">
+
+                            <div class="d-flex justify-content-between align-items-start flex-wrap gap-3">
+
+                                <div>
+                                    <h4 class="fw-bold mb-1">
+                                        @ruta.Nombre
+                                    </h4>
+
+                                    <span class="text-muted">
+                                        Creada el @ruta.FechaCreacion.ToString("dd/MM/yyyy")
+                                    </span>
+                                </div>
+
+                                <span class="badge bg-success fs-6">
+                                    @ruta.DistanciaTotalKm.ToString("N2") km
+                                </span>
+
+                            </div>
+
+                            <hr />
+
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <strong>Fecha de visita:</strong>
+                                    @ruta.FechaVisita.ToString("dd/MM/yyyy")
+                                </div>
+
+                                <div class="col-md-6">
+                                    <strong>Experiencias:</strong>
+                                    @ruta.RutaExperiencia.Count
+                                </div>
+                            </div>
+
+                            <h6 class="fw-bold mb-3">
+                                Recorrido de la ruta
+                            </h6>
+
+                            <div class="list-group list-group-flush">
+
+                                @foreach (var punto in ruta.RutaExperiencia.OrderBy(p => p.OrdenVisita))
+                                {
+                                    <div class="list-group-item px-0 py-3">
+
+                                        <div class="d-flex align-items-center gap-3">
+
+                                            <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center"
+                                                 style="width: 35px; height: 35px; min-width: 35px;">
+                                                @punto.OrdenVisita
+                                            </div>
+
+                                            <div class="flex-grow-1">
+                                                <strong>
+                                                    @punto.IdExperienciaNavigation.Nombre
+                                                </strong>
+
+                                                <div class="text-muted small">
+                                                    Distancia desde el punto anterior:
+                                                    @punto.DistanciaKm.ToString("N2") km
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                }
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    }
+
+    <div class="mt-4">
+        <a asp-controller="Rutas"
+           asp-action="Crear"
+           class="btn btn-success">
+            Crear otra ruta
+        </a>
+
+        <a asp-controller="Home"
+           asp-action="Index"
+           class="btn btn-outline-secondary ms-2">
+            Volver al inicio
+        </a>
+    </div>
+
+</div>
