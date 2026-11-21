@@ -1,0 +1,130 @@
+﻿@model IEnumerable<PuraRuta.Models.Reserva>
+
+@{
+    ViewData["Title"] = "Administración de reservas";
+}
+
+<div class="container py-5">
+
+    <div class="mb-4">
+        <h2 class="fw-bold">Administración de reservas</h2>
+        <p class="text-muted">
+            Consulta y administra las reservas de los turistas.
+        </p>
+    </div>
+
+    @if (TempData["MensajeReservaAdmin"] != null)
+    {
+        <div class="alert alert-info">
+            @TempData["MensajeReservaAdmin"]
+        </div>
+    }
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-light border">
+            No hay reservas registradas.
+        </div>
+    }
+    else
+    {
+        <div class="card border-0 shadow-sm rounded-4">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+
+                    <thead class="table-light">
+                        <tr>
+                            <th>Reserva</th>
+                            <th>Turista</th>
+                            <th>Experiencia</th>
+                            <th>Fecha visita</th>
+                            <th>Personas</th>
+                            <th>Total</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var reserva in Model)
+                        {
+                            <tr>
+                                <td>#@reserva.IdReserva</td>
+
+                                <td>
+                                    <strong>
+                                        @reserva.IdTuristaNavigation.IdTuristaNavigation.Nombre
+                                        @reserva.IdTuristaNavigation.IdTuristaNavigation.Apellido1
+                                        @reserva.IdTuristaNavigation.IdTuristaNavigation.Apellido2
+                                    </strong>
+                                    <br />
+                                    <small class="text-muted">
+                                        @reserva.IdTuristaNavigation.IdTuristaNavigation.Correo
+                                    </small>
+                                </td>
+
+                                <td>
+                                    @reserva.IdExperienciaNavigation.Nombre
+                                </td>
+
+                                <td>
+                                    @reserva.FechaVisita.ToString("dd/MM/yyyy")
+                                </td>
+
+                                <td>
+                                    @reserva.CantidadPersonas
+                                </td>
+
+                                <td>
+                                    ₡@reserva.PrecioTotal.ToString("N2")
+                                </td>
+
+                                <td>
+                                    <span class="badge @(reserva.IdEstadoReserva == 1 ? "bg-success" : "bg-secondary")">
+                                        @reserva.IdEstadoReservaNavigation.Nombre
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <form asp-action="CambiarEstado"
+                                          method="post"
+                                          class="d-flex gap-2">
+
+                                        @Html.AntiForgeryToken()
+
+                                        <input type="hidden"
+                                               name="id"
+                                               value="@reserva.IdReserva" />
+
+                                        <select name="idEstado"
+                                                class="form-select form-select-sm">
+
+                                            <option value="1"
+                                                    selected="@(reserva.IdEstadoReserva == 1)">
+                                                Confirmada
+                                            </option>
+
+                                            <option value="2"
+                                                    selected="@(reserva.IdEstadoReserva == 2)">
+                                                Cancelada
+                                            </option>
+
+                                        </select>
+
+                                        <button type="submit"
+                                                class="btn btn-sm btn-outline-success">
+                                            Guardar
+                                        </button>
+
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    }
+
+</div>
