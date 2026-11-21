@@ -1,0 +1,75 @@
+﻿@model IEnumerable<PuraRuta.Models.EncuestaSatisfaccion>
+
+@{
+    ViewData["Title"] = "Mis encuestas";
+}
+
+<div class="container py-5">
+
+    <h2 class="fw-bold mb-2">Mis encuestas</h2>
+    <p class="text-muted mb-4">
+        Consulta tus opiniones y calificaciones registradas.
+    </p>
+
+    @if (TempData["MensajeEncuesta"] != null)
+    {
+        <div class="alert alert-info">
+            @TempData["MensajeEncuesta"]
+        </div>
+    }
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-light border">
+            Todavía no has completado ninguna encuesta.
+        </div>
+    }
+    else
+    {
+        <div class="row g-4">
+            @foreach (var encuesta in Model)
+            {
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-body p-4">
+
+                            <h5 class="fw-bold">
+                                @encuesta.IdReservaNavigation
+                                .IdExperienciaNavigation.Nombre
+                            </h5>
+
+                            <p class="text-warning fs-5 mb-2">
+                                @for (int i = 0; i < encuesta.Calificacion; i++)
+                                {
+                                    <span>★</span>
+                                }
+                                @for (int i = encuesta.Calificacion; i < 5; i++)
+                                {
+                                    <span class="text-muted">☆</span>
+                                }
+                            </p>
+
+                            <p>
+                                @encuesta.Comentario
+                            </p>
+
+                            <hr />
+
+                            <p class="mb-1">
+                                <strong>¿La recomendarías?</strong>
+                                @(encuesta.Recomendaria ? "Sí" : "No")
+                            </p>
+
+                            <small class="text-muted">
+                                Registrada el:
+                                @encuesta.FechaEncuesta.ToString("dd/MM/yyyy")
+                            </small>
+
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+
+</div>
