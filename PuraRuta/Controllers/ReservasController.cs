@@ -46,6 +46,71 @@ namespace PuraRuta.Controllers
             return View(modelo);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> MisReservas()
+        {
+            var idUsuario = int.Parse(
+                User.FindFirstValue(ClaimTypes.NameIdentifier)!
+            );
+
+            var reservas = await _context.Reservas
+                .AsNoTracking()
+                .Include(r => r.IdExperienciaNavigation)
+                .Include(r => r.IdEstadoReservaNavigation)
+                .Where(r => r.IdTurista == idUsuario)
+                .OrderByDescending(r => r.FechaReserva)
+                .ToListAsync();
+
+            return View(reservas);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Cancelar(int id)
+        {
+            var idUsuario = int.Parse(
+                User.FindFirstValue(ClaimTypes.NameIdentifier)!
+            );
+
+            var reserva = await _context.Reservas
+                .FirstOrDefaultAsync(r =>
+                    r.IdReserva == id &&
+                    r.IdTurista == idUsuario
+                );
+
+            if (reserva == null)
+            {
+                return NotFound();
+            }
+
+            if (reserva.IdEstadoReserva != 1)
+            {
+                TempData["MensajeReserva"] =
+                    "Esta reserva no se puede cancelar porque no está confirmada.";
+
+                return RedirectToAction(nameof(MisReservas));
+            }
+
+            var hoy = DateOnly.FromDateTime(DateTime.Today);
+
+            if (reserva.FechaVisita < hoy.AddDays(7))
+            {
+                TempData["MensajeReserva"] =
+                    "Solo puedes cancelar reservas con al menos 7 días de anticipación.";
+
+                return RedirectToAction(nameof(MisReservas));
+            }
+
+            reserva.IdEstadoReserva = 2;
+
+            await _context.SaveChangesAsync();
+
+            TempData["MensajeReserva"] =
+                "La reserva se canceló correctamente.";
+
+            return RedirectToAction(nameof(MisReservas));
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Crear(ReservaViewModel modelo)

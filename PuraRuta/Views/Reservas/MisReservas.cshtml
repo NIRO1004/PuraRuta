@@ -1,0 +1,146 @@
+﻿@model IEnumerable<PuraRuta.Models.Reserva>
+
+@{
+    ViewData["Title"] = "Mis reservas";
+    var hoy = DateOnly.FromDateTime(DateTime.Today);
+}
+
+<div class="container py-5">
+
+    <div class="mb-4">
+        <h2 class="fw-bold">Mis reservas</h2>
+        <p class="text-muted">
+            Consulta tus experiencias reservadas y administra tus reservas.
+        </p>
+    </div>
+
+    @if (TempData["MensajeReserva"] != null)
+    {
+        <div class="alert alert-info">
+            @TempData["MensajeReserva"]
+        </div>
+    }
+
+    @if (!Model.Any())
+    {
+        <div class="card shadow-sm border-0 rounded-4 p-4 text-center">
+            <h5>No tienes reservas registradas</h5>
+            <p class="text-muted">
+                Explora nuestro catálogo y encuentra tu próxima aventura.
+            </p>
+            <a asp-controller="Catalogo"
+               asp-action="Index"
+               class="btn btn-success">
+                Explorar experiencias
+            </a>
+        </div>
+    }
+    else
+    {
+        <div class="row g-4">
+
+            @foreach (var reserva in Model)
+            {
+                var puedeCancelar =
+                    reserva.IdEstadoReserva == 1 &&
+                    reserva.FechaVisita >= hoy.AddDays(7);
+
+                <div class="col-12">
+                    <div class="card shadow-sm border-0 rounded-4">
+                        <div class="card-body p-4">
+
+                            <div class="d-flex justify-content-between
+                                align-items-start flex-wrap gap-3">
+
+                                <div>
+                                    <h5 class="fw-bold mb-1">
+                                        @reserva.IdExperienciaNavigation.Nombre
+                                    </h5>
+
+                                    <span class="text-muted">
+                                        Reserva #@reserva.IdReserva
+                                    </span>
+                                </div>
+
+                                <span class="badge
+                                    @(reserva.IdEstadoReserva == 1
+    ? "bg-success"
+    : "bg-secondary")">
+                                    @reserva.IdEstadoReservaNavigation.Nombre
+                                </span>
+
+                            </div>
+
+                            <hr />
+
+                            <div class="row g-3">
+
+                                <div class="col-md-3">
+                                    <small class="text-muted">Fecha de visita</small>
+                                    <p class="fw-semibold mb-0">
+                                        @reserva.FechaVisita.ToString("dd/MM/yyyy")
+                                    </p>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <small class="text-muted">Personas</small>
+                                    <p class="fw-semibold mb-0">
+                                        @reserva.CantidadPersonas
+                                    </p>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <small class="text-muted">Precio total</small>
+                                    <p class="fw-semibold mb-0">
+                                        ₡@reserva.PrecioTotal.ToString("N2")
+                                    </p>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <small class="text-muted">Fecha de reserva</small>
+                                    <p class="fw-semibold mb-0">
+                                        @reserva.FechaReserva.ToString("dd/MM/yyyy")
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            @if (puedeCancelar)
+                            {
+                                <hr />
+
+                                <form asp-controller="Reservas"
+                                      asp-action="Cancelar"
+                                      method="post">
+
+                                    @Html.AntiForgeryToken()
+
+                                    <input type="hidden"
+                                           name="id"
+                                           value="@reserva.IdReserva" />
+
+                                    <button type="submit"
+                                            class="btn btn-outline-danger"
+                                            onclick="return confirm('¿Estás seguro de cancelar esta reserva?');">
+                                        Cancelar reserva
+                                    </button>
+                                </form>
+                            }
+                            else if (reserva.IdEstadoReserva == 1)
+                            {
+                                <hr />
+                                <small class="text-muted">
+                                    Ya no es posible cancelar esta reserva
+                                    porque faltan menos de 7 días para la visita.
+                                </small>
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    }
+
+</div>
