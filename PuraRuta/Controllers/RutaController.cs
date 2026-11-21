@@ -48,6 +48,7 @@ namespace PuraRuta.Controllers
                 .Where(r => r.IdTurista == idUsuario)
                 .Include(r => r.RutaExperiencia)
                     .ThenInclude(re => re.IdExperienciaNavigation)
+                    .ThenInclude(e => e.IdDireccionNavigation)
                 .OrderByDescending(r => r.FechaCreacion)
                 .ToListAsync();
 

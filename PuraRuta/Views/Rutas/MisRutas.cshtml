@@ -104,6 +104,43 @@
                                     </div>
                                 }
 
+                                @{
+                                    var puntos = ruta.RutaExperiencia
+                                        .OrderBy(p => p.OrdenVisita)
+                                        .ToList();
+
+                                    var destino = puntos.Last().IdExperienciaNavigation.IdDireccionNavigation;
+
+                                    var coordenadasDestino =
+                                        $"{destino.Latitud.ToString(System.Globalization.CultureInfo.InvariantCulture)}," +
+                                        $"{destino.Longitud.ToString(System.Globalization.CultureInfo.InvariantCulture)}";
+
+                                    var waypoints = string.Join("|",
+                                        puntos.Take(puntos.Count - 1).Select(p =>
+                                        {
+                                            var direccion = p.IdExperienciaNavigation.IdDireccionNavigation;
+
+                                            return $"{direccion.Latitud.ToString(System.Globalization.CultureInfo.InvariantCulture)}," +
+                                                   $"{direccion.Longitud.ToString(System.Globalization.CultureInfo.InvariantCulture)}";
+                                        }));
+
+                                    var urlGoogleMaps =
+                                        "https://www.google.com/maps/dir/?api=1&destination=" +
+                                        Uri.EscapeDataString(coordenadasDestino) +
+                                        "&waypoints=" +
+                                        Uri.EscapeDataString(waypoints) +
+                                        "&travelmode=driving";
+                                }
+                            </div>
+
+                            <div class="mt-4">
+                                <a href="@urlGoogleMaps"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="btn btn-success">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    Ver recorrido en Google Maps
+                                </a>
                             </div>
 
                         </div>
