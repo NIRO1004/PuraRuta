@@ -107,54 +107,80 @@
      User.IsInRole("Administrador"))
     {
         <div class="admin-access-card">
-            <div>
-                <h3>Administración de comunidades</h3>
-                <p>
-                    Registra, modifica y administra las comunidades
-                    disponibles en PuraRuta.
-                </p>
+
+            <div class="admin-access-grid">
+
+                <article class="admin-option">
+                    <h3>Administración de comunidades</h3>
+                    <p>
+                        Registra, modifica y administra las comunidades
+                        disponibles en PuraRuta.
+                    </p>
+                    <a asp-controller="AdministracionComunidades"
+                       asp-action="Index"
+                       class="btn btn-success">
+                        Administrar comunidades
+                    </a>
+                </article>
+
+                <article class="admin-option">
+                    <h3>Administración de experiencias</h3>
+                    <p>
+                        Registra, modifica y administra las experiencias
+                        turísticas disponibles en PuraRuta.
+                    </p>
+                    <a asp-controller="AdministracionExperiencias"
+                       asp-action="Index"
+                       class="btn btn-success">
+                        Administrar experiencias
+                    </a>
+                </article>
+
+                <article class="admin-option">
+                    <h3>Administración de reservas</h3>
+                    <p>
+                        Consulta las reservas de los turistas y administra
+                        sus estados y disponibilidad.
+                    </p>
+                    <a asp-controller="AdministracionReservas"
+                       asp-action="Index"
+                       class="btn btn-success">
+                        Administrar reservas
+                    </a>
+                </article>
+
+                <article class="admin-option">
+                    <h3>Reportes de satisfacción</h3>
+                    <p>
+                        Consulta las calificaciones, comentarios y niveles
+                        de satisfacción de los turistas.
+                    </p>
+                    <a asp-controller="AdministracionReportes"
+                       asp-action="Index"
+                       class="btn btn-success">
+                        Ver reportes
+                    </a>
+                </article>
+
+                <div class="admin-option">
+                    <h3>Dashboard administrativo</h3>
+
+                    <p>
+                        Consulta las estadísticas generales de PuraRuta,
+                        las reservas mensuales, las experiencias más reservadas
+                        y la calificación promedio.
+                    </p>
+
+                    <a asp-controller="DashboardAdmin"
+                       asp-action="Index"
+                       class="btn btn-success">
+                        Ver dashboard
+                    </a>
+                </div>
+
             </div>
-
-            <a asp-controller="AdministracionComunidades"
-               asp-action="Index"
-               class="btn btn-success">
-                Administrar comunidades
-            </a>
-
-            <hr />
-
-            <div>
-                <h3>Administración de experiencias</h3>
-                <p>
-                    Registra, modifica y administra las experiencias
-                    turísticas disponibles en PuraRuta.
-                </p>
-            </div>
-
-            <a asp-controller="AdministracionExperiencias"
-               asp-action="Index"
-               class="btn btn-success">
-                Administrar experiencias
-            </a>
-
-            
-            <hr />
-
-            <div>
-                <h3>Administración de reservas</h3>
-                <p>
-                    Consulta las reservas de los turistas y administra
-                    sus estados y disponibilidad.
-                </p>
-            </div>
-
-            <a asp-controller="AdministracionReservas"
-               asp-action="Index"
-               class="btn btn-success">
-                Administrar reservas
-            </a>
-
         </div>
+
     }
 
     

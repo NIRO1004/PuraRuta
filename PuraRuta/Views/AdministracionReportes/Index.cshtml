@@ -1,0 +1,171 @@
+﻿@model IEnumerable<PuraRuta.Models.EncuestaSatisfaccion>
+
+@{
+    ViewData["Title"] = "Reportes de satisfacción";
+    var resumen = ViewBag.ResumenExperiencias;
+}
+
+<div class="container py-5">
+
+    <div class="mb-4">
+        <h2 class="fw-bold">Reportes de satisfacción</h2>
+        <p class="text-muted">
+            Consulta las opiniones y calificaciones de los turistas.
+        </p>
+    </div>
+
+    <!-- INDICADORES GENERALES -->
+    <div class="row g-3 mb-4">
+
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm rounded-4 h-100">
+                <div class="card-body">
+                    <p class="text-muted mb-1">Total de encuestas</p>
+                    <h3 class="fw-bold">@ViewBag.TotalEncuestas</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm rounded-4 h-100">
+                <div class="card-body">
+                    <p class="text-muted mb-1">Calificación promedio</p>
+                    <h3 class="fw-bold">
+                        @(((double)ViewBag.CalificacionPromedio).ToString("N2")) / 5
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm rounded-4 h-100">
+                <div class="card-body">
+                    <p class="text-muted mb-1">Recomendaciones</p>
+                    <h3 class="fw-bold">@ViewBag.TotalRecomendaciones</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm rounded-4 h-100">
+                <div class="card-body">
+                    <p class="text-muted mb-1">Porcentaje de recomendación</p>
+                    <h3 class="fw-bold">
+                        @(((double)ViewBag.PorcentajeRecomendacion).ToString("N1"))%
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- RESUMEN POR EXPERIENCIA -->
+    <div class="card border-0 shadow-sm rounded-4 mb-4">
+        <div class="card-body p-4">
+
+            <h5 class="fw-bold mb-3">
+                Satisfacción por experiencia
+            </h5>
+
+            @if (Model.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+
+                        <thead class="table-light">
+                            <tr>
+                                <th>Experiencia</th>
+                                <th>Encuestas</th>
+                                <th>Promedio</th>
+                                <th>Recomendaciones</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var item in resumen)
+                            {
+                                <tr>
+                                    <td>@item.Experiencia</td>
+                                    <td>@item.CantidadEncuestas</td>
+                                    <td>
+                                        <span class="text-warning">
+                                            ★
+                                        </span>
+                                        @item.Promedio.ToString("N2") / 5
+                                    </td>
+                                    <td>@item.Recomendaciones</td>
+                                </tr>
+                            }
+                        </tbody>
+
+                    </table>
+                </div>
+            }
+            else
+            {
+                <p class="text-muted">
+                    Todavía no hay encuestas para generar reportes.
+                </p>
+            }
+
+        </div>
+    </div>
+
+    <!-- COMENTARIOS -->
+    <div class="card border-0 shadow-sm rounded-4">
+
+        <div class="card-body p-4">
+
+            <h5 class="fw-bold mb-3">
+                Opiniones de los turistas
+            </h5>
+
+            @if (!Model.Any())
+            {
+                <p class="text-muted">
+                    No hay comentarios registrados.
+                </p>
+            }
+            else
+            {
+                @foreach (var encuesta in Model)
+                {
+                    <div class="border-bottom py-3">
+
+                        <div class="d-flex justify-content-between flex-wrap">
+                            <strong>
+                                @encuesta.IdReservaNavigation.IdExperienciaNavigation.Nombre
+                            </strong>
+
+                            <span class="text-warning">
+                                @encuesta.Calificacion / 5 ★
+                            </span>
+                        </div>
+
+                        <p class="mb-1 mt-2">
+                            @encuesta.Comentario
+                        </p>
+
+                        <small class="text-muted">
+                            @encuesta.IdReservaNavigation.IdTuristaNavigation.IdTuristaNavigation.Nombre
+                            |
+                            @encuesta.FechaEncuesta.ToString("dd/MM/yyyy")
+                        </small>
+
+                        <div class="mt-1">
+                            <small>
+                                Recomendaría:
+                                <strong>
+                                    @(encuesta.Recomendaria ? "Sí" : "No")
+                                </strong>
+                            </small>
+                        </div>
+
+                    </div>
+                }
+            }
+
+        </div>
+    </div>
+
+</div>

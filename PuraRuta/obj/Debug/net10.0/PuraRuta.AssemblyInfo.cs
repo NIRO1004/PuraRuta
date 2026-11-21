@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PuraRuta")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b71f3baccb413725ba3ffcecfadd2e2cc5440e12")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9f3007ba5e10c67935d9ab15ce8627ead0a5c2f")]
 [assembly: System.Reflection.AssemblyProductAttribute("PuraRuta")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PuraRuta")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
