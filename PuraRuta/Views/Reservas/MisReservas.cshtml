@@ -135,6 +135,28 @@
                                 </small>
                             }
 
+                            @if (reserva.IdEstadoReserva == 3)
+                            {
+                                <hr />
+
+                                @if (reserva.EncuestaSatisfaccion == null)
+                                {
+                                    <a asp-controller="Encuestas"
+                                       asp-action="Crear"
+                                       asp-route-id="@reserva.IdReserva"
+                                       class="btn btn-outline-success">
+                                        <i class="bi bi-star me-2"></i>
+                                        Completar encuesta
+                                    </a>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-success">
+                                        Encuesta completada
+                                    </span>
+                                }
+                            }
+
                         </div>
                     </div>
                 </div>
