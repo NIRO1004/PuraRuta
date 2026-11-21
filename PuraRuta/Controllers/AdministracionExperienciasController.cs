@@ -248,17 +248,22 @@ namespace PuraRuta.Controllers
                 experiencia.TransportePublico =
                     model.TransportePublico;
 
-                experiencia.IdDireccionNavigation.IdDistrito =
-                    model.IdDistrito!.Value;
 
-                experiencia.IdDireccionNavigation.DireccionExacta =
-                    model.DireccionExacta.Trim();
+                // Crear una dirección independiente para esta experiencia
+                var nuevaDireccion = new Direccion
+                {
+                    IdDistrito = model.IdDistrito!.Value,
+                    DireccionExacta = model.DireccionExacta.Trim(),
+                    Latitud = model.Latitud!.Value,
+                    Longitud = model.Longitud!.Value
+                };
 
-                experiencia.IdDireccionNavigation.Latitud =
-                    model.Latitud!.Value;
+                _context.Direccions.Add(nuevaDireccion);
+                await _context.SaveChangesAsync();
 
-                experiencia.IdDireccionNavigation.Longitud =
-                    model.Longitud!.Value;
+                // Asociar la nueva dirección con la experiencia
+                experiencia.IdDireccion = nuevaDireccion.IdDireccion;
+                experiencia.IdDireccionNavigation = nuevaDireccion;
 
                 await GuardarFotografias(
                     id,

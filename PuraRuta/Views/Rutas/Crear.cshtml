@@ -1,0 +1,162 @@
+﻿@model IEnumerable<PuraRuta.Models.Experiencium>
+
+@{
+    ViewData["Title"] = "Crear ruta";
+}
+
+<div class="container py-4">
+    <div class="mb-4">
+        <h2 class="fw-bold">Crear una ruta</h2>
+        <p class="text-muted">
+            Selecciona entre 2 y 5 experiencias para planificar tu recorrido.
+        </p>
+    </div>
+
+    @if (TempData["MensajeRuta"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["MensajeRuta"]
+        </div>
+    }
+
+    <form asp-action="Crear" method="post">
+        @Html.AntiForgeryToken()
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Nombre de la ruta</label>
+            <input type="text" name="Nombre" class="form-control"
+                   maxlength="60" required
+                   placeholder="Ej. Aventura por Guanacaste" />
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label fw-semibold">Fecha de visita</label>
+            <input type="date" name="FechaVisita" class="form-control"
+                   min="@DateTime.Today.ToString("yyyy-MM-dd")" required />
+        </div>
+
+        
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4 class="fw-bold">Experiencias disponibles</h4>
+            <span class="badge bg-success" id="contador">0 de 5 seleccionadas</span>
+        </div>
+
+        <div class="row g-4">
+            @foreach (var experiencia in Model)
+            {
+                var foto = experiencia.FotoExperiencia.FirstOrDefault();
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        @if (foto != null)
+                        {
+                            <img src="@foto.RutaImagen"
+                                 class="card-img-top"
+                                 style="height:200px; object-fit:cover;"
+                                 alt="@experiencia.Nombre" />
+                        }
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">
+                                @experiencia.Nombre
+                            </h5>
+
+                            <p class="text-muted small">
+                                @experiencia.IdComunidadNavigation.Nombre
+                            </p>
+
+                            <p class="small">
+                                @experiencia.DescripcionExperiencia
+                            </p>
+
+                            <p class="mb-1">
+                                <strong>Precio:</strong>
+                                ₡@experiencia.Precio
+                            </p>
+
+                            <p class="mb-1">
+                                <strong>Duración:</strong>
+                                @experiencia.DuracionHoras horas
+                            </p>
+
+                            <p class="mb-3">
+                                <strong>Dificultad:</strong>
+                                @experiencia.Dificultad
+                            </p>
+
+                            <div class="form-check">
+                                <input class="form-check-input experiencia-check"
+                                       type="checkbox"
+                                       name="ExperienciasSeleccionadas"
+                                       value="@experiencia.IdExperiencia"
+                                       id="experiencia_@experiencia.IdExperiencia" />
+
+                                <label class="form-check-label"
+                                       for="experiencia_@experiencia.IdExperiencia">
+                                    Seleccionar experiencia
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="mt-4">
+            <span class="text-danger" id="mensaje"></span>
+        </div>
+
+        <div class="mt-3">
+            <button type="submit" class="btn btn-success px-4">
+                Crear ruta
+            </button>
+            <a asp-controller="Home" asp-action="Index"
+               class="btn btn-outline-secondary ms-2">
+                Cancelar
+            </a>
+        </div>
+    </form>
+</div>
+
+
+
+@section Scripts {
+    <script>
+        const checks = document.querySelectorAll(".experiencia-check");
+        const contador = document.getElementById("contador");
+        const mensaje = document.getElementById("mensaje");
+
+        function actualizarContador() {
+            const seleccionadas = document.querySelectorAll(
+                ".experiencia-check:checked"
+            ).length;
+
+            contador.textContent = `${seleccionadas} de 5 seleccionadas`;
+
+            checks.forEach(check => {
+                if (!check.checked) {
+                    check.disabled = seleccionadas >= 5;
+                }
+            });
+        }
+
+        checks.forEach(check => {
+            check.addEventListener("change", actualizarContador);
+        });
+
+        document.querySelector("form").addEventListener("submit", function (e) {
+            const cantidad = document.querySelectorAll(
+                ".experiencia-check:checked"
+            ).length;
+
+            if (cantidad < 2 || cantidad > 5) {
+                e.preventDefault();
+                mensaje.textContent =
+                    "Debes seleccionar entre 2 y 5 experiencias.";
+            }
+        });
+
+        actualizarContador();
+    </script>
+}
