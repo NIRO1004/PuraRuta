@@ -1,0 +1,362 @@
+﻿@model PuraRuta.ViewModels.ExperienciaViewModel
+
+@{
+    ViewData["Title"] = "Editar experiencia";
+}
+
+<div class="container py-4">
+    <div class="mb-4">
+        <h2>Editar experiencia</h2>
+        <p class="text-muted">Actualiza la información de la experiencia turística.</p>
+    </div>
+
+    <form asp-action="Editar" asp-route-id="@Model.IdExperiencia"
+          method="post" enctype="multipart/form-data">
+
+        @Html.AntiForgeryToken()
+        <input asp-for="IdExperiencia" type="hidden" />
+
+        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+        <div class="card shadow-sm border-0 p-4 mb-4">
+            <h5 class="mb-3">Información general</h5>
+
+            <div class="mb-3">
+                <label asp-for="Nombre" class="form-label">Nombre de la experiencia</label>
+                <input asp-for="Nombre" class="form-control" maxlength="100" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="DescripcionExperiencia" class="form-label">Descripción</label>
+                <textarea asp-for="DescripcionExperiencia" class="form-control" rows="4"></textarea>
+                <span asp-validation-for="DescripcionExperiencia" class="text-danger"></span>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label asp-for="IdComunidad" class="form-label">Comunidad</label>
+                    <select asp-for="IdComunidad" class="form-select">
+                        <option value="">Seleccione una comunidad</option>
+                        @foreach (var comunidad in ViewBag.Comunidades)
+                        {
+                            <option value="@comunidad.IdComunidad">
+                                @comunidad.Nombre
+                            </option>
+                        }
+                    </select>
+                    <span asp-validation-for="IdComunidad" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label asp-for="IdCategoria" class="form-label">Categoría</label>
+                    <select asp-for="IdCategoria" class="form-select">
+                        <option value="">Seleccione una categoría</option>
+                        @foreach (var categoria in ViewBag.Categorias)
+                        {
+                            <option value="@categoria.IdCategoria">
+                                @categoria.Nombre
+                            </option>
+                        }
+                    </select>
+                    <span asp-validation-for="IdCategoria" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm border-0 p-4 mb-4">
+            <h5 class="mb-3">Características de la experiencia</h5>
+
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label asp-for="Precio" class="form-label">Precio (₡)</label>
+                    <input asp-for="Precio" class="form-control" type="number" min="0" step="0.01" />
+                    <span asp-validation-for="Precio" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label asp-for="DuracionHoras" class="form-label">Duración (horas)</label>
+                    <input asp-for="DuracionHoras" class="form-control" type="number" min="0.1" step="0.1" />
+                    <span asp-validation-for="DuracionHoras" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label asp-for="EdadMinima" class="form-label">Edad mínima</label>
+                    <input asp-for="EdadMinima" class="form-control" type="number" min="0" max="120" />
+                    <span asp-validation-for="EdadMinima" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label asp-for="Dificultad" class="form-label">Dificultad</label>
+                    <select asp-for="Dificultad" class="form-select">
+                        <option value="">Seleccione la dificultad</option>
+                        <option value="Baja">Baja</option>
+                        <option value="Media">Media</option>
+                        <option value="Alta">Alta</option>
+                    </select>
+                    <span asp-validation-for="Dificultad" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label asp-for="CapacidadDiaria" class="form-label">Capacidad diaria (personas)</label>
+                    <input asp-for="CapacidadDiaria" class="form-control" type="number" min="1" />
+                    <span asp-validation-for="CapacidadDiaria" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-4 mb-3 d-flex align-items-center">
+                    <div class="form-check mt-3">
+                        <input asp-for="TransportePublico" class="form-check-input" />
+                        <label asp-for="TransportePublico" class="form-check-label">
+                            Disponible transporte público
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm border-0 p-4 mb-4">
+            <h5 class="mb-3">Ubicación geográfica</h5>
+
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label asp-for="IdProvincia" class="form-label">Provincia</label>
+                    <select asp-for="IdProvincia" class="form-select" id="IdProvincia">
+                        <option value="">Seleccione una provincia</option>
+                        @foreach (var p in ViewBag.Provincias)
+                        {
+                            <option value="@p.IdProvincia">@p.Nombre</option>
+                        }
+                    </select>
+                    <span asp-validation-for="IdProvincia" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label asp-for="IdCanton" class="form-label">Cantón</label>
+                    <select asp-for="IdCanton" class="form-select" id="IdCanton">
+                        <option value="">Seleccione un cantón</option>
+                        @foreach (var c in ViewBag.Cantones)
+                        {
+                            <option value="@c.IdCanton">@c.Nombre</option>
+                        }
+                    </select>
+                    <span asp-validation-for="IdCanton" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label asp-for="IdDistrito" class="form-label">Distrito</label>
+                    <select asp-for="IdDistrito" class="form-select" id="IdDistrito">
+                        <option value="">Seleccione un distrito</option>
+                        @foreach (var d in ViewBag.Distritos)
+                        {
+                            <option value="@d.IdDistrito">@d.Nombre</option>
+                        }
+                    </select>
+                    <span asp-validation-for="IdDistrito" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="DireccionExacta" class="form-label">Dirección exacta</label>
+                <input asp-for="DireccionExacta" class="form-control" maxlength="150" />
+                <span asp-validation-for="DireccionExacta" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Ubicación en el mapa</label>
+                <p class="text-muted">Arrastra el marcador o haz clic en el mapa para actualizar la ubicación.</p>
+                <div id="mapaEditarExperiencia"
+                     style="width:100%;height:400px;border-radius:14px;"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label asp-for="Latitud" class="form-label">Latitud</label>
+                    <input asp-for="Latitud" id="Latitud" class="form-control" type="number" step="any" />
+                    <span asp-validation-for="Latitud" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label asp-for="Longitud" class="form-label">Longitud</label>
+                    <input asp-for="Longitud" id="Longitud" class="form-control" type="number" step="any" />
+                    <span asp-validation-for="Longitud" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm border-0 p-4 mb-4">
+            <h5 class="mb-3">Fotografías</h5>
+
+            @if (Model.FotografiasExistentes != null && Model.FotografiasExistentes.Any())
+            {
+                <label class="form-label">Fotografías actuales</label>
+
+                <div class="row g-3 mb-3">
+                    @foreach (var foto in Model.FotografiasExistentes)
+                    {
+                        <div class="col-6 col-md-3">
+                            <img src="@foto"
+                                 alt="Fotografía de la experiencia"
+                                 style="width:100%;height:140px;object-fit:cover;border-radius:10px;" />
+                        </div>
+                    }
+                </div>
+            }
+
+            <div class="mb-3">
+                <label asp-for="Fotografias" class="form-label">Agregar fotografías nuevas</label>
+
+                <input asp-for="Fotografias"
+                       type="file"
+                       class="form-control"
+                       id="Fotografias"
+                       accept="image/jpeg,image/png,image/webp"
+                       multiple />
+
+                <small class="text-muted">
+                    Las fotografías nuevas se agregarán a las existentes.
+                    Son opcionales. Máximo 10 por envío y 5 MB cada una.
+                </small>
+
+                <div id="vistaPreviaFotografias" class="row g-3 mt-2"></div>
+                <span asp-validation-for="Fotografias" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-success">Guardar cambios</button>
+            <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        const provinciaSelect = document.getElementById('IdProvincia');
+        const cantonSelect = document.getElementById('IdCanton');
+        const distritoSelect = document.getElementById('IdDistrito');
+
+        provinciaSelect.addEventListener('change', async function () {
+            cantonSelect.innerHTML = '<option value="">Seleccione un cantón</option>';
+            distritoSelect.innerHTML = '<option value="">Seleccione un distrito</option>';
+
+            if (!this.value) return;
+
+            try {
+                const response = await fetch(`/Cuenta/ObtenerCantones?provinciaId=${this.value}`);
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+                const data = await response.json();
+                data.forEach(x => cantonSelect.add(new Option(x.nombre, x.id)));
+            } catch (e) {
+                console.error('Error al cargar cantones', e);
+                alert('No se pudieron cargar los cantones.');
+            }
+        });
+
+        cantonSelect.addEventListener('change', async function () {
+            distritoSelect.innerHTML = '<option value="">Seleccione un distrito</option>';
+
+            if (!this.value) return;
+
+            try {
+                const response = await fetch(`/Cuenta/ObtenerDistritos?cantonId=${this.value}`);
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+                const data = await response.json();
+                data.forEach(x => distritoSelect.add(new Option(x.nombre, x.id)));
+            } catch (e) {
+                console.error('Error al cargar distritos', e);
+                alert('No se pudieron cargar los distritos.');
+            }
+        });
+
+        let mapaEditarExperiencia, marcadorEditarExperiencia;
+
+        window.initMapaEditarExperiencia = function () {
+            const initial = {
+                lat: Number(document.getElementById('Latitud').value) || 9.9281,
+                lng: Number(document.getElementById('Longitud').value) || -84.0907
+            };
+
+            mapaEditarExperiencia = new google.maps.Map(
+                document.getElementById('mapaEditarExperiencia'),
+                {
+                    center: initial,
+                    zoom: 13,
+                    mapTypeControl: true,
+                    streetViewControl: false
+                }
+            );
+
+            marcadorEditarExperiencia = new google.maps.Marker({
+                position: initial,
+                map: mapaEditarExperiencia,
+                draggable: true,
+                title: 'Ubicación de la experiencia'
+            });
+
+            mapaEditarExperiencia.addListener('click', e => {
+                marcadorEditarExperiencia.setPosition(e.latLng);
+                setCoords(e.latLng);
+            });
+
+            marcadorEditarExperiencia.addListener('dragend', e => setCoords(e.latLng));
+        };
+
+        function setCoords(pos) {
+            const lat = typeof pos.lat === 'function' ? pos.lat() : pos.lat;
+            const lng = typeof pos.lng === 'function' ? pos.lng() : pos.lng;
+
+            document.getElementById('Latitud').value = lat.toFixed(7);
+            document.getElementById('Longitud').value = lng.toFixed(7);
+        }
+
+        function moveMarkerFromInputs() {
+            if (!mapaEditarExperiencia || !marcadorEditarExperiencia) return;
+
+            const lat = Number(document.getElementById('Latitud').value);
+            const lng = Number(document.getElementById('Longitud').value);
+
+            if (!Number.isFinite(lat) || !Number.isFinite(lng) ||
+                lat < -90 || lat > 90 || lng < -180 || lng > 180) return;
+
+            const pos = { lat, lng };
+            marcadorEditarExperiencia.setPosition(pos);
+            mapaEditarExperiencia.panTo(pos);
+        }
+
+        document.getElementById('Latitud').addEventListener('change', moveMarkerFromInputs);
+        document.getElementById('Longitud').addEventListener('change', moveMarkerFromInputs);
+
+        document.getElementById('Fotografias').addEventListener('change', function () {
+            const preview = document.getElementById('vistaPreviaFotografias');
+            preview.innerHTML = '';
+
+            Array.from(this.files).forEach(file => {
+                if (!file.type.startsWith('image/')) return;
+
+                const url = URL.createObjectURL(file);
+                const col = document.createElement('div');
+                col.className = 'col-6 col-md-3';
+
+                const img = document.createElement('img');
+                img.src = url;
+                img.alt = file.name;
+                img.style.cssText = 'width:100%;height:140px;object-fit:cover;border-radius:10px;';
+
+                const name = document.createElement('p');
+                name.className = 'small text-muted mt-1';
+                name.textContent = file.name;
+
+                col.append(img, name);
+                preview.appendChild(col);
+            });
+        });
+    </script>
+
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOEO1WzwOVmJqYcD4UWxazEOOW66vnQ-0&callback=initMapaEditarExperiencia">
+    </script>
+}

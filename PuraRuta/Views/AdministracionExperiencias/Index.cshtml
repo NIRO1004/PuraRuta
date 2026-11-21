@@ -1,0 +1,151 @@
+﻿@model IEnumerable<PuraRuta.Models.Experiencium>
+
+@{
+    ViewData["Title"] = "Administración de experiencias";
+}
+
+<div class="container py-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+        <div>
+            <h2>Administración de experiencias</h2>
+            <p class="text-muted mb-0">
+                Gestiona las experiencias turísticas de PuraRuta.
+            </p>
+        </div>
+
+        <a asp-action="Crear" class="btn btn-success">
+            <i class="bi bi-plus-circle me-1"></i>
+            Nueva experiencia
+        </a>
+    </div>
+
+    @if (TempData["ExperienciaCreada"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["ExperienciaCreada"]
+        </div>
+    }
+
+    @if (TempData["ExperienciaActualizada"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["ExperienciaActualizada"]
+        </div>
+    }
+
+    @if (TempData["EstadoExperiencia"] != null)
+    {
+        <div class="alert alert-info">
+            @TempData["EstadoExperiencia"]
+        </div>
+    }
+
+    <div class="card shadow-sm border-0">
+        <div class="card-body">
+
+            @if (Model.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Experiencia</th>
+                                <th>Comunidad</th>
+                                <th>Categoría</th>
+                                <th>Precio</th>
+                                <th>Dificultad</th>
+                                <th>Capacidad</th>
+                                <th>Estado</th>
+                                <th class="text-center">Acciones</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var experiencia in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        <strong>@experiencia.Nombre</strong>
+                                        <div class="small text-muted">
+                                            @experiencia.DuracionHoras horas
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        @experiencia.IdComunidadNavigation.Nombre
+                                    </td>
+
+                                    <td>
+                                        @experiencia.IdCategoriaNavigation.Nombre
+                                    </td>
+
+                                    <td>
+                                        ₡@experiencia.Precio.ToString("N2")
+                                    </td>
+
+                                    <td>
+                                        @experiencia.Dificultad
+                                    </td>
+
+                                    <td>
+                                        @experiencia.CapacidadDiaria personas
+                                    </td>
+
+                                    <td>
+                                        @if (experiencia.Estado)
+                                        {
+                                            <span class="badge bg-success">Activa</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-secondary">Inactiva</span>
+                                        }
+                                    </td>
+
+                                    <td>
+                                        <div class="d-flex justify-content-center gap-2">
+
+                                            <a asp-action="Editar"
+                                               asp-route-id="@experiencia.IdExperiencia"
+                                               class="btn btn-sm btn-outline-primary">
+                                                Editar
+                                            </a>
+
+                                            <form asp-action="CambiarEstado"
+                                                  asp-route-id="@experiencia.IdExperiencia"
+                                                  method="post"
+                                                  onsubmit="return confirm('¿Deseas @(experiencia.Estado ? "desactivar" : "activar") esta experiencia?');">
+
+                                                @Html.AntiForgeryToken()
+
+                                                <button type="submit"
+                                                        class="btn btn-sm @(experiencia.Estado ? "btn-outline-danger" : "btn-outline-success")">
+                                                    @(experiencia.Estado ? "Desactivar" : "Activar")
+                                                </button>
+                                            </form>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <div class="text-center py-5">
+                    <h5>No hay experiencias registradas</h5>
+                    <p class="text-muted">
+                        Registra una nueva experiencia para comenzar.
+                    </p>
+                    <a asp-action="Crear" class="btn btn-success">
+                        Registrar experiencia
+                    </a>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
