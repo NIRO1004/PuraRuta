@@ -69,6 +69,33 @@ namespace PuraRuta.Controllers
                 .Select(e => (double?)e.Calificacion)
                 .AverageAsync() ?? 0;
 
+            // Calcular la demanda estimada del próximo mes
+            var inicioMesActual = new DateTime(
+                DateTime.Today.Year,
+                DateTime.Today.Month,
+                1
+            );
+
+            var inicioTresMeses = inicioMesActual.AddMonths(-3);
+
+            var personasUltimosTresMeses = await _context.Reservas
+                .AsNoTracking()
+                .Where(r => r.FechaReserva >= inicioTresMeses &&
+                            r.FechaReserva < inicioMesActual &&
+                            r.IdEstadoReserva != 2)
+                .SumAsync(r => (int?)r.CantidadPersonas) ?? 0;
+
+            var demandaEstimada = personasUltimosTresMeses / 3.0;
+
+            modelo.DemandaEstimadaProximoMes = Math.Round(
+                demandaEstimada,
+                0,
+                MidpointRounding.AwayFromZero
+            );
+
+            modelo.MesProximoMes = inicioMesActual
+                .ToString("MMMM yyyy");
+
             // Enviar el año seleccionado a la vista
             ViewBag.AnioSeleccionado = anioSeleccionado;
 

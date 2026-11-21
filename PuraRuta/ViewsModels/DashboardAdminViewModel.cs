@@ -7,11 +7,13 @@ namespace PuraRuta.ViewModels
     {
         public double CalificacionPromedio { get; set; }
 
-        public List<ReservasPorMesViewModel> ReservasMensuales { get; set; }
-            = new();
+        public List<ReservasPorMesViewModel> ReservasMensuales { get; set; } = new();
 
-        public List<TopExperienciaViewModel> TopExperiencias { get; set; }
-            = new();
+        public List<TopExperienciaViewModel> TopExperiencias { get; set; } = new();
+
+        public double DemandaEstimadaProximoMes { get; set; }
+
+        public string MesProximoMes { get; set; } = string.Empty;
     }
 
     public class ReservasPorMesViewModel

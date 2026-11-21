@@ -182,4 +182,24 @@
         </div>
     </div>
 
+    <!-- DEMANDA ESTIMADA -->
+    <div class="card border-0 shadow-sm rounded-4 mt-4 mb-4">
+        <div class="card-body p-4">
+
+            <p class="text-muted mb-2">
+                Demanda estimada para @Model.MesProximoMes
+            </p>
+
+            <h2 class="fw-bold text-success">
+                @Model.DemandaEstimadaProximoMes.ToString("N0") personas
+            </h2>
+
+            <small class="text-muted">
+                Estimación basada en el promedio de personas reservadas
+                durante los últimos tres meses completos.
+            </small>
+
+        </div>
+    </div>
+
 </div>
