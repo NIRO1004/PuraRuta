@@ -1,7 +1,5 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
-wwwroot\imagenes\comunidades\1d1a31e1df6d4a66bcd1b5cbfc410947.jpeg
-wwwroot\imagenes\experiencias\417cc14dddbe4e1c846970237a5bc4c9.jpeg
 wwwroot\imagenes\experiencias\senderismo.jpeg
 wwwroot\imagenes\experiencias\taller-cultural.jpeg
 wwwroot\ima\logo.png
@@ -66,6 +64,8 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\imagenes\comunidades\1d1a31e1df6d4a66bcd1b5cbfc410947.jpeg
+wwwroot\imagenes\experiencias\417cc14dddbe4e1c846970237a5bc4c9.jpeg
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\wwwroot\favicon.ico
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\wwwroot\lib\jquery\dist\jquery.slim.min.map
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\wwwroot\lib\jquery\dist\jquery.slim.min.js

@@ -11,6 +11,7 @@
         ← Volver al catálogo
     </a>
 
+    
     <div class="details-card">
 
         
@@ -84,6 +85,17 @@
                     </strong>
                 </div>
 
+            </div>
+
+
+            <div class="details-booking mb-4">
+                <a asp-controller="Reservas"
+                   asp-action="Crear"
+                   asp-route-id="@Model.IdExperiencia"
+                   class="btn btn-success">
+                    <i class="bi bi-calendar-check"></i>
+                    Reservar experiencia
+                </a>
             </div>
 
             <div class="details-location">

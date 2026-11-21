@@ -1,0 +1,216 @@
+﻿@model PuraRuta.ViewModels.ReservaViewModel
+
+@{
+    ViewData["Title"] = "Reservar experiencia";
+    var experiencia = (PuraRuta.Models.Experiencium)ViewBag.Experiencia;
+}
+
+<div class="container py-5">
+
+    <div class="mb-4">
+        <h1 class="fw-bold">Reservar experiencia</h1>
+        <p class="text-muted">
+            Completa los datos para reservar tu próxima aventura.
+        </p>
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-lg-7">
+            <div class="card border-0 shadow-sm rounded-4">
+                <div class="card-body p-4">
+
+                    <h4 class="fw-bold mb-4">
+                        Datos de la reserva
+                    </h4>
+
+                    <form asp-controller="Reservas"
+                          asp-action="Crear"
+                          method="post">
+
+                        @Html.AntiForgeryToken()
+
+                        <input type="hidden"
+                               asp-for="IdExperiencia" />
+
+                        <div asp-validation-summary="ModelOnly"
+                             class="text-danger mb-3">
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="FechaVisita"
+                                   class="form-label fw-semibold">
+                                Fecha de visita
+                            </label>
+
+                            <input asp-for="FechaVisita"
+                                   type="date"
+                                   class="form-control"
+                                   min="@DateTime.Today.ToString("yyyy-MM-dd")" />
+
+                            <span asp-validation-for="FechaVisita"
+                                  class="text-danger">
+                            </span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="CantidadPersonas"
+                                   class="form-label fw-semibold">
+                                Cantidad de personas
+                            </label>
+
+                            <input asp-for="CantidadPersonas"
+                                   type="number"
+                                   min="1"
+                                   max="20"
+                                   class="form-control" />
+
+                            <small class="text-muted">
+                                Incluye al turista que realiza la reserva y sus acompañantes.
+                            </small>
+
+                            <span asp-validation-for="CantidadPersonas"
+                                  class="text-danger">
+                            </span>
+                        </div>
+
+                        
+                        <div class="mb-4" id="edadesAcompanantes">
+                            <label class="form-label fw-semibold">
+                                Edades de los acompañantes
+                            </label>
+
+                            <p class="text-muted small">
+                                Indica la edad de cada acompañante. Tu edad se obtiene de tu perfil.
+                            </p>
+
+                            @for (int i = 0; i < 19; i++)
+                            {
+                                <div class="mb-2 campo-edad" id="campoEdad_@i">
+                                    <label class="form-label">
+                                        Acompañante @(i + 1)
+                                    </label>
+
+                                    <input type="number"
+                                           name="EdadesAcompanantes[@i]"
+                                           class="form-control"
+                                           min="1"
+                                           max="120"
+                                           placeholder="Edad del acompañante"
+                                           disabled />
+                                </div>
+                            }
+                        </div>
+
+
+                        <div class="alert alert-info">
+                            El precio total se calculará automáticamente
+                            según la cantidad de personas.
+                        </div>
+
+                        <button type="submit"
+                                class="btn btn-success w-100">
+                            Confirmar reserva
+                        </button>
+
+                        <a asp-controller="Catalogo"
+                           asp-action="Detalles"
+                           asp-route-id="@experiencia.IdExperiencia"
+                           class="btn btn-outline-secondary w-100 mt-2">
+                            Volver a la experiencia
+                        </a>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-5">
+            <div class="card border-0 shadow-sm rounded-4">
+                <div class="card-body p-4">
+
+                    <h5 class="fw-bold mb-3">
+                        Resumen de experiencia
+                    </h5>
+
+                    <h4 class="text-success fw-bold">
+                        @experiencia.Nombre
+                    </h4>
+
+                    <p class="text-muted">
+                        @experiencia.DescripcionExperiencia
+                    </p>
+
+                    <hr />
+
+                    <div class="d-flex justify-content-between mb-3">
+                        <span>Precio por persona</span>
+                        <strong>
+                            ₡@experiencia.Precio.ToString("N2")
+                        </strong>
+                    </div>
+
+                    <div class="d-flex justify-content-between mb-3">
+                        <span>Edad mínima</span>
+                        <strong>
+                            @experiencia.EdadMinima años
+                        </strong>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <span>Capacidad diaria</span>
+                        <strong>
+                            @experiencia.CapacidadDiaria personas
+                        </strong>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const cantidadPersonas = document.getElementById("CantidadPersonas");
+        const camposEdad = document.querySelectorAll(".campo-edad");
+
+        function actualizarEdades() {
+
+            const cantidad = parseInt(cantidadPersonas.value) || 1;
+            const acompanantes = cantidad - 1;
+
+            camposEdad.forEach((campo, index) => {
+
+                const input = campo.querySelector("input");
+
+                if (index < acompanantes) {
+                    campo.style.display = "block";
+                    input.disabled = false;
+                    input.required = true;
+                } else {
+                    campo.style.display = "none";
+                    input.disabled = true;
+                    input.required = false;
+                    input.value = "";
+                }
+            });
+        }
+
+        cantidadPersonas.addEventListener("input", actualizarEdades);
+
+        actualizarEdades();
+    });
+</script>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
