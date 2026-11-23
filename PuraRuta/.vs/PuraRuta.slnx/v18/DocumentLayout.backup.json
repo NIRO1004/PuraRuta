@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\views\\dashboardadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:views\\dashboardadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\viewsmodels\\dashboardadminviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:viewsmodels\\dashboardadminviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -114,7 +114,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 177,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Document",
@@ -151,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DashboardAdminController.cs",
               "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\DashboardAdminController.cs",
               "RelativeDocumentMoniker": "Controllers\\DashboardAdminController.cs",
@@ -159,12 +159,11 @@
               "RelativeToolTip": "Controllers\\DashboardAdminController.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAuwFwAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-21T21:44:45.41Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-21T21:44:45.41Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "DashboardAdminViewModel.cs",
               "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\DashboardAdminViewModel.cs",
               "RelativeDocumentMoniker": "ViewsModels\\DashboardAdminViewModel.cs",
@@ -172,8 +171,7 @@
               "RelativeToolTip": "ViewsModels\\DashboardAdminViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-21T21:43:14.341Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-21T21:43:14.341Z"
             },
             {
               "$type": "Document",
@@ -213,33 +211,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\DashboardAdmin\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\DashboardAdmin\\Index.cshtml",
               "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\DashboardAdmin\\Index.cshtml",
               "RelativeToolTip": "Views\\DashboardAdmin\\Index.cshtml",
-              "ViewState": "AgIAAJQAAAAAAAAAAAAowLkAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAowLkAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-11-21T21:45:40.933Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAowLIAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAowNAAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-11-21T03:14:58.608Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
