@@ -180,7 +180,6 @@ namespace PuraRuta.Controllers
             }
 
 
-            // Validar las edades de los acompañantes
             int cantidadAcompanantes = modelo.CantidadPersonas - 1;
 
             if (modelo.EdadesAcompanantes == null ||

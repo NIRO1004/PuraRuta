@@ -20,7 +20,6 @@ namespace PuraRuta.Controllers
             decimal? precioMinimo,
             decimal? precioMaximo)
         {
-            // Consultar experiencias activas
             var consulta = _context.Experiencia
                 .Include(e => e.IdCategoriaNavigation)
                 .Include(e => e.IdComunidadNavigation)
@@ -31,14 +30,12 @@ namespace PuraRuta.Controllers
                             .ThenInclude(c => c.IdProvinciaNavigation)
                 .Where(e => e.Estado == true);
 
-            // Filtro por categoría
             if (categoriaId.HasValue)
             {
                 consulta = consulta.Where(e =>
                     e.IdCategoria == categoriaId.Value);
             }
 
-            // Filtro por provincia
             if (provinciaId.HasValue)
             {
                 consulta = consulta.Where(e =>
@@ -48,14 +45,12 @@ namespace PuraRuta.Controllers
                      .IdProvinciaNavigation.IdProvincia == provinciaId.Value);
             }
 
-            // Filtro por precio mínimo
             if (precioMinimo.HasValue)
             {
                 consulta = consulta.Where(e =>
                     e.Precio >= precioMinimo.Value);
             }
 
-            // Filtro por precio máximo
             if (precioMaximo.HasValue)
             {
                 consulta = consulta.Where(e =>
@@ -66,7 +61,6 @@ namespace PuraRuta.Controllers
                 .OrderBy(e => e.Nombre)
                 .ToListAsync();
 
-            // Datos para los filtros
             ViewBag.Categorias = await _context.Categoria
                 .OrderBy(c => c.Nombre)
                 .ToListAsync();
@@ -75,7 +69,6 @@ namespace PuraRuta.Controllers
                 .OrderBy(p => p.Nombre)
                 .ToListAsync();
 
-            // Mantener los filtros seleccionados
             ViewBag.CategoriaId = categoriaId;
             ViewBag.ProvinciaId = provinciaId;
             ViewBag.PrecioMinimo = precioMinimo;

@@ -186,7 +186,6 @@
 
             ventanaInfoExperiencias = ventana;
 
-            // Límites para ajustar el mapa a todas las experiencias
             const limites = new google.maps.LatLngBounds();
             let cantidadMarcadores = 0;
 
@@ -215,10 +214,8 @@
                     title: experiencia.nombre
                 });
 
-                // Guardar el marcador usando el ID de la experiencia
                 marcadoresExperiencias[experiencia.id] = marcador;
 
-                // Ampliar los límites del mapa
                 limites.extend(posicion);
                 cantidadMarcadores++;
 
@@ -241,7 +238,6 @@
                 });
             });
 
-            // Ajustar el zoom según la cantidad de experiencias
             if (cantidadMarcadores > 1) {
                 mapa.fitBounds(limites);
             }

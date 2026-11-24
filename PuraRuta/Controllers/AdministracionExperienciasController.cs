@@ -249,7 +249,6 @@ namespace PuraRuta.Controllers
                     model.TransportePublico;
 
 
-                // Crear una dirección independiente para esta experiencia
                 var nuevaDireccion = new Direccion
                 {
                     IdDistrito = model.IdDistrito!.Value,
@@ -261,7 +260,6 @@ namespace PuraRuta.Controllers
                 _context.Direccions.Add(nuevaDireccion);
                 await _context.SaveChangesAsync();
 
-                // Asociar la nueva dirección con la experiencia
                 experiencia.IdDireccion = nuevaDireccion.IdDireccion;
                 experiencia.IdDireccionNavigation = nuevaDireccion;
 

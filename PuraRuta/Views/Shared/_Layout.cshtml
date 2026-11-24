@@ -15,12 +15,10 @@
 
 <body>
 
-    <!-- BARRA DE NAVEGACIÓN -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark navbar-puraruta shadow-sm">
             <div class="container">
 
-                <!-- LOGOTIPO -->
                 <a class="navbar-brand"
                    asp-controller="Home"
                    asp-action="Index">
@@ -31,7 +29,6 @@
 
                 </a>
 
-                <!-- MENÚ RESPONSIVE -->
                 <button class="navbar-toggler"
                         type="button"
                         data-bs-toggle="collapse"
@@ -44,7 +41,6 @@
 
                 </button>
 
-                <!-- OPCIONES DE NAVEGACIÓN -->
                 <div class="collapse navbar-collapse" id="menuPrincipal">
 
                     <ul class="navbar-nav mx-auto">
@@ -77,7 +73,6 @@
 
                     </ul>
 
-                    <!-- ACCESO DE USUARIOS -->
                     <div class="d-flex gap-2 align-items-center">
 
                         
@@ -141,18 +136,14 @@
         </nav>
     </header>
 
-    <!-- CONTENIDO DE LAS VISTAS -->
     <main role="main">
         @RenderBody()
     </main>
 
-    <!-- PIE DE PÁGINA -->
-    <!-- PIE DE PÁGINA -->
     <footer class="footer-puraruta">
         <div class="container">
             <div class="row align-items-center text-center text-lg-start">
 
-                <!-- LOGOTIPO -->
                 <div class="col-lg-3 mb-3 mb-lg-0">
                     <a class="footer-brand"
                        asp-controller="Home"
@@ -165,14 +156,12 @@
                     </a>
                 </div>
 
-                <!-- MENSAJE -->
                 <div class="col-lg-5 mb-3 mb-lg-0 text-center">
                     <span>
                         Descubre Costa Rica, vive nuevas experiencias.
                     </span>
                 </div>
 
-                <!-- DERECHOS RESERVADOS -->
                 <div class="col-lg-4 text-center text-lg-end">
                     <small>
                         &copy; 2026 PuraRuta. Todos los derechos reservados.
@@ -183,8 +172,6 @@
         </div>
     </footer>
 
-
-    <!-- SCRIPTS -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

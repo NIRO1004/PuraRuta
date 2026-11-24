@@ -22,7 +22,6 @@ namespace PuraRuta.Controllers
             _context = context;
         }
 
-        // Mostrar formulario de registro
         [HttpGet]
         public async Task<IActionResult> Registro()
         {
@@ -30,12 +29,10 @@ namespace PuraRuta.Controllers
             return View();
         }
 
-        // Registrar un nuevo turista
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Registro(RegistroTuristaViewModel model)
         {
-            // Validar fecha de nacimiento
             if (model.FechaNacimiento.HasValue &&
                 model.FechaNacimiento.Value > DateOnly.FromDateTime(DateTime.Today))
             {
@@ -45,7 +42,6 @@ namespace PuraRuta.Controllers
                 );
             }
 
-            // Comprobar si el correo ya existe
             if (!string.IsNullOrWhiteSpace(model.Correo))
             {
                 bool correoExiste = await _context.Usuarios
@@ -60,7 +56,6 @@ namespace PuraRuta.Controllers
                 }
             }
 
-            // Validar relación entre provincia, cantón y distrito
             if (model.IdProvincia.HasValue &&
                 model.IdCanton.HasValue &&
                 model.IdDistrito.HasValue)
@@ -84,7 +79,6 @@ namespace PuraRuta.Controllers
                 }
             }
 
-            // Si hay errores, regresar al formulario
             if (!ModelState.IsValid)
             {
                 await CargarProvincias();
@@ -96,7 +90,6 @@ namespace PuraRuta.Controllers
 
             try
             {
-                // 1. Crear usuario
                 var usuario = new Usuario
                 {
                     IdRol = 2,
@@ -108,7 +101,6 @@ namespace PuraRuta.Controllers
                     Estado = true
                 };
 
-                // Generar hash seguro de la contraseña
                 var passwordHasher = new PasswordHasher<Usuario>();
 
                 usuario.ContrasenaHash = passwordHasher.HashPassword(
@@ -120,7 +112,6 @@ namespace PuraRuta.Controllers
 
                 await _context.SaveChangesAsync();
 
-                // 2. Crear dirección
                 var direccion = new Direccion
                 {
                     IdDistrito = model.IdDistrito!.Value,
@@ -133,7 +124,6 @@ namespace PuraRuta.Controllers
 
                 await _context.SaveChangesAsync();
 
-                // 3. Crear registro de turista
                 var turista = new Turistum
                 {
                     IdTurista = usuario.IdUsuario,
@@ -146,7 +136,6 @@ namespace PuraRuta.Controllers
 
                 await _context.SaveChangesAsync();
 
-                // Confirmar las tres operaciones
                 await transaccion.CommitAsync();
 
                 TempData["RegistroExitoso"] =
@@ -168,14 +157,12 @@ namespace PuraRuta.Controllers
             }
         }
 
-        // Mostrar formulario de inicio de sesión
         [HttpGet]
         public IActionResult Login()
         {
             return View();
         }
 
-        // Cerrar sesión
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
@@ -242,7 +229,6 @@ namespace PuraRuta.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        // Obtener cantones según la provincia
         [HttpGet]
         public async Task<IActionResult> ObtenerCantones(int provinciaId)
         {
@@ -259,7 +245,6 @@ namespace PuraRuta.Controllers
             return Json(cantones);
         }
 
-        // Obtener distritos según el cantón
         [HttpGet]
         public async Task<IActionResult> ObtenerDistritos(int cantonId)
         {
@@ -276,7 +261,6 @@ namespace PuraRuta.Controllers
             return Json(distritos);
         }
 
-        // Cargar provincias
         private async Task CargarProvincias()
         {
             ViewBag.Provincias = await _context.Provincia

@@ -19,12 +19,10 @@ namespace PuraRuta.Controllers
 
         public async Task<IActionResult> Index()
         {
-            // Obtener el ID del usuario autenticado.
             var idUsuario = int.Parse(
                 User.FindFirstValue(ClaimTypes.NameIdentifier)!
             );
 
-            // Consultar el perfil del turista.
             var turista = await _context.Turista
                 .Include(t => t.IdDireccionNavigation)
                     .ThenInclude(d => d.IdDistritoNavigation)
@@ -38,7 +36,6 @@ namespace PuraRuta.Controllers
                 return NotFound("No se encontró el perfil del turista.");
             }
 
-            // Calcular la edad actual.
             var hoy = DateOnly.FromDateTime(DateTime.Today);
 
             int edad = hoy.Year - turista.FechaNacimiento.Year;
@@ -48,18 +45,15 @@ namespace PuraRuta.Controllers
                 edad--;
             }
 
-            // Obtener categorías de interés.
             var categoriasInteres = turista.TuristaCategoria
                 .Select(tc => tc.IdCategoria)
                 .ToList();
 
-            // Obtener la provincia del turista.
             var provinciaTurista = turista.IdDireccionNavigation
                 .IdDistritoNavigation
                 .IdCantonNavigation
                 .IdProvincia;
 
-            // Obtener experiencias activas.
             var experiencias = await _context.Experiencia
                 .Include(e => e.IdCategoriaNavigation)
                 .Include(e => e.IdComunidadNavigation)
@@ -71,20 +65,17 @@ namespace PuraRuta.Controllers
                 .Where(e => e.Estado && e.EdadMinima <= edad)
                 .ToListAsync();
 
-            // Calcular puntuación de cada experiencia.
             var recomendaciones = experiencias.Select(e =>
             {
                 int puntuacion = 0;
                 var motivos = new List<string>();
 
-                // Coincidencia con intereses.
                 if (categoriasInteres.Contains(e.IdCategoria))
                 {
                     puntuacion += 40;
                     motivos.Add("Coincide con tus intereses.");
                 }
 
-                // Misma provincia.
                 var provinciaExperiencia = e.IdDireccionNavigation
                     .IdDistritoNavigation
                     .IdCantonNavigation
@@ -96,7 +87,6 @@ namespace PuraRuta.Controllers
                     motivos.Add("Se encuentra en tu provincia.");
                 }
 
-                // Distancia geográfica.
                 double distancia = CalcularDistancia(
                     (double)turista.IdDireccionNavigation.Latitud,
                     (double)turista.IdDireccionNavigation.Longitud,
@@ -110,7 +100,6 @@ namespace PuraRuta.Controllers
                     motivos.Add("Está a menos de 25 km de tu ubicación.");
                 }
 
-                // Disponibilidad de vehículo y transporte público.
                 if (turista.TieneVehiculo)
                 {
                     puntuacion += 10;
@@ -138,7 +127,6 @@ namespace PuraRuta.Controllers
             return View(recomendaciones);
         }
 
-        // Calcular distancia entre dos coordenadas usando Haversine.
         private static double CalcularDistancia(
             double lat1, double lon1,
             double lat2, double lon2)

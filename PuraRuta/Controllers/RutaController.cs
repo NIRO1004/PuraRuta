@@ -61,7 +61,6 @@ namespace PuraRuta.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Crear(RutaViewModel modelo)
         {
-            // Validar cantidad de experiencias
             if (modelo.ExperienciasSeleccionadas == null ||
                 modelo.ExperienciasSeleccionadas.Count < 2 ||
                 modelo.ExperienciasSeleccionadas.Count > 5)
@@ -87,12 +86,10 @@ namespace PuraRuta.Controllers
                 return View(experienciasDisponibles);
             }
 
-            // Obtener el identificador del usuario autenticado
             var idUsuario = int.Parse(
                 User.FindFirstValue(ClaimTypes.NameIdentifier)!
             );
 
-            // Buscar el turista y su ubicación registrada
             var turista = await _context.Turista
                 .Include(t => t.IdDireccionNavigation)
                 .FirstOrDefaultAsync(t => t.IdTurista == idUsuario);
@@ -102,7 +99,6 @@ namespace PuraRuta.Controllers
                 return NotFound("No se encontró el perfil del turista.");
             }
 
-            // Obtener las experiencias seleccionadas
             var idsSeleccionados = modelo.ExperienciasSeleccionadas
                 .Distinct()
                 .ToList();
@@ -146,7 +142,6 @@ namespace PuraRuta.Controllers
                 return View(disponibles);
             }
 
-            // Ordenar las experiencias desde la ubicación del turista
             double latitudActual = (double)turista.IdDireccionNavigation.Latitud;
             double longitudActual = (double)turista.IdDireccionNavigation.Longitud;
 
@@ -185,7 +180,6 @@ namespace PuraRuta.Controllers
                 pendientes.Remove(siguiente.Experiencia);
             }
 
-            // Crear la ruta
             var ruta = new Rutum
             {
                 IdTurista = turista.IdTurista,
@@ -198,7 +192,6 @@ namespace PuraRuta.Controllers
             _context.Ruta.Add(ruta);
             await _context.SaveChangesAsync();
 
-            // Registrar las experiencias en el orden calculado
             for (int i = 0; i < ordenadas.Count; i++)
             {
                 var punto = new RutaExperiencium

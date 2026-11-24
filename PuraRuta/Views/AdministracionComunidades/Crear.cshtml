@@ -19,7 +19,6 @@
         <div asp-validation-summary="ModelOnly"
              class="text-danger mb-3"></div>
 
-        <!-- INFORMACIÓN GENERAL -->
         <div class="card shadow-sm border-0 p-4 mb-4">
             <h5 class="mb-3">Información general</h5>
 
@@ -46,7 +45,6 @@
                       class="text-danger"></span>
             </div>
 
-            <!-- FOTOGRAFÍAS -->
             <div class="mb-3">
                 <label asp-for="Fotografias" class="form-label">
                     Fotografías de la comunidad
@@ -66,7 +64,6 @@
             </div>
         </div>
 
-        <!-- UBICACIÓN GEOGRÁFICA -->
         <div class="card shadow-sm border-0 p-4 mb-4">
             <h5 class="mb-3">Ubicación geográfica</h5>
 
@@ -130,7 +127,6 @@
                       class="text-danger"></span>
             </div>
 
-            <!-- MAPA -->
             <div class="mb-3">
                 <label class="form-label">Ubicación en el mapa</label>
                 <p class="text-muted">
@@ -140,7 +136,6 @@
                 <div id="mapaComunidad"></div>
             </div>
 
-            <!-- COORDENADAS -->
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label asp-for="Latitud" class="form-label">
@@ -170,7 +165,6 @@
             </div>
         </div>
 
-        <!-- BOTONES -->
         <div class="d-flex gap-2">
             <button type="submit" class="btn btn-success">
                 Guardar comunidad
@@ -187,9 +181,6 @@
     <partial name="_ValidationScriptsPartial" />
 
     <script>
-        // =====================================
-        // SELECTORES GEOGRÁFICOS
-        // =====================================
 
         const provinciaSelect = document.getElementById("IdProvincia");
         const cantonSelect = document.getElementById("IdCanton");
@@ -206,7 +197,6 @@
             select.appendChild(opcionInicial);
         }
 
-        // Cargar cantones cuando cambia la provincia
         provinciaSelect.addEventListener("change", async function () {
             const provinciaId = this.value;
 
@@ -253,7 +243,6 @@
             }
         });
 
-        // Cargar distritos cuando cambia el cantón
         cantonSelect.addEventListener("change", async function () {
             const cantonId = this.value;
 
@@ -297,9 +286,6 @@
             }
         });
 
-        // =====================================
-        // GOOGLE MAPS
-        // =====================================
 
         let mapaComunidad = null;
         let marcadorComunidad = null;
@@ -339,7 +325,6 @@
             });
         };
 
-        // Acepta tanto objetos literales {lat, lng} como LatLng de Google Maps
         function actualizarCoordenadas(posicion) {
             const latitud = typeof posicion.lat === "function"
                 ? posicion.lat()
@@ -353,7 +338,6 @@
             document.getElementById("Longitud").value = Number(longitud).toFixed(7);
         }
 
-        // Actualizar marcador cuando se escriben coordenadas manualmente
         function actualizarMarcadorDesdeCampos() {
             if (!mapaComunidad || !marcadorComunidad) return;
 
@@ -380,9 +364,6 @@
         document.getElementById("Longitud")
             .addEventListener("change", actualizarMarcadorDesdeCampos);
 
-        // =====================================
-        // VISTA PREVIA DE FOTOGRAFÍAS
-        // =====================================
 
         const inputFotografias = document.getElementById("Fotografias");
         const vistaPrevia = document.getElementById("vistaPreviaFotografias");
@@ -432,7 +413,6 @@
         });
     </script>
 
-    <!-- Reemplaza el valor por una clave NUEVA y restringida de Google Maps -->
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOEO1WzwOVmJqYcD4UWxazEOOW66vnQ-0&callback=initMapaComunidad">
     </script>

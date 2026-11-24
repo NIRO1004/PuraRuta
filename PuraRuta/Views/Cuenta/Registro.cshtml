@@ -188,7 +188,6 @@
     <partial name="_ValidationScriptsPartial" />
 
     <script>
-        // Selectores de provincia, cantón y distrito
 
         const provincia = document.getElementById("provincia");
         const canton = document.getElementById("canton");
@@ -242,7 +241,6 @@
             distrito.disabled = false;
         });
 
-        // Google Maps
 
         window.initRegisterMap = function () {
 
@@ -278,7 +276,6 @@
                 longitud.value = posicion.lng().toFixed(7);
             }
 
-            // Seleccionar ubicación haciendo clic
 
             mapa.addListener("click", function (evento) {
 
@@ -287,21 +284,18 @@
                 actualizarCoordenadas(evento.latLng);
             });
 
-            // Cambiar ubicación arrastrando el marcador
 
             marcador.addListener("dragend", function () {
 
                 actualizarCoordenadas(marcador.getPosition());
             });
 
-            // Coordenadas iniciales
 
             actualizarCoordenadas(marcador.getPosition());
         };
 
     </script>
 
-    <!-- Cargar Google Maps -->
 
     <script async
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOEO1WzwOVmJqYcD4UWxazEOOW66vnQ-0&callback=initRegisterMap&loading=async">
