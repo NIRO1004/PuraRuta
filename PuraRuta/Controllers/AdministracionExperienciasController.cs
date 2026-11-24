@@ -462,7 +462,7 @@ namespace PuraRuta.Controllers
                     {
                         IdExperiencia = idExperiencia,
                         RutaImagen = rutaWeb,
-                        Descripcion = string.IsNullOrWhiteSpace(descripcion)
+                        DescripcionFotoExperiencia = string.IsNullOrWhiteSpace(descripcion)
                             ? "Fotografía de la experiencia"
                             : descripcion
                     });

@@ -9,7 +9,7 @@ public partial class Direccion
 
     public int IdDistrito { get; set; }
 
-    public string DireccionExacta { get; set; } = null!;
+    public string? DireccionExacta { get; set; }
 
     public decimal Latitud { get; set; }
 

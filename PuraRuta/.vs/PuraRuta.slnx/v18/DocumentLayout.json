@@ -3,16 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\models\\fotocomunidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:models\\fotocomunidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\viewsmodels\\rutaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:viewsmodels\\rutaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\models\\fotoexperiencium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:models\\fotoexperiencium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\controllers\\administracioncomunidadescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:controllers\\administracioncomunidadescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\data\\purarutacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:data\\purarutacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\views\\mapa\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:views\\mapa\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\views\\catalogo\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:views\\catalogo\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\views\\catalogo\\detalles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:views\\catalogo\\detalles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\controllers\\administracionexperienciascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:controllers\\administracionexperienciascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\controllers\\catalogocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:controllers\\catalogocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\viewsmodels\\rutaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:viewsmodels\\rutaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\viewsmodels\\reservaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -91,10 +127,6 @@
       "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:views\\perfil\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\views\\mapa\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:views\\mapa\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -121,14 +153,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\views\\cuenta\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:views\\cuenta\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\views\\catalogo\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:views\\catalogo\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\views\\catalogo\\detalles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:views\\catalogo\\detalles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\views\\administracionreservas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -175,10 +199,6 @@
       "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:models\\canton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\data\\purarutacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:data\\purarutacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\controllers\\rutacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:controllers\\rutacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -211,10 +231,6 @@
       "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:controllers\\dashboardadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\controllers\\catalogocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:controllers\\catalogocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\controllers\\administracionreservascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:controllers\\administracionreservascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -225,14 +241,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\controllers\\administraci\u00F3nreportescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:controllers\\administraci\u00F3nreportescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\controllers\\administracionexperienciascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:controllers\\administracionexperienciascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\controllers\\administracioncomunidadescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|solutionrelative:controllers\\administracioncomunidadescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{43B3F3DB-F4F3-C31B-E2E1-AD3BA5AB51D2}|PuraRuta.csproj|c:\\users\\niels\\documents\\github\\puraruta\\puraruta\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -250,11 +258,11 @@
       "DocumentGroups": [
         {
           "DockedHeight": 177,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 61,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
@@ -263,632 +271,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-11-19T04:23:37.348Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T01:57:31.72Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-11-24T01:57:26.946Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RegistroTuristaViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\RegistroTuristaViewModel.cs",
-              "RelativeDocumentMoniker": "ViewsModels\\RegistroTuristaViewModel.cs",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\RegistroTuristaViewModel.cs",
-              "RelativeToolTip": "ViewsModels\\RegistroTuristaViewModel.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T01:57:20.71Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PerfilViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\PerfilViewModel.cs",
-              "RelativeDocumentMoniker": "ViewsModels\\PerfilViewModel.cs",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\PerfilViewModel.cs",
-              "RelativeToolTip": "ViewsModels\\PerfilViewModel.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T01:57:18.39Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LoginViewModels.cs",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\LoginViewModels.cs",
-              "RelativeDocumentMoniker": "ViewsModels\\LoginViewModels.cs",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\LoginViewModels.cs",
-              "RelativeToolTip": "ViewsModels\\LoginViewModels.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T01:57:16.594Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DashboardAdminViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\DashboardAdminViewModel.cs",
-              "RelativeDocumentMoniker": "ViewsModels\\DashboardAdminViewModel.cs",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\DashboardAdminViewModel.cs",
-              "RelativeToolTip": "ViewsModels\\DashboardAdminViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-21T21:43:14.341Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RutaViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\RutaViewModel.cs",
-              "RelativeDocumentMoniker": "ViewsModels\\RutaViewModel.cs",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\RutaViewModel.cs",
-              "RelativeToolTip": "ViewsModels\\RutaViewModel.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAA9wBQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-21T03:22:11.588Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ComunidadViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\ComunidadViewModel.cs",
-              "RelativeDocumentMoniker": "ViewsModels\\ComunidadViewModel.cs",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\ComunidadViewModel.cs",
-              "RelativeToolTip": "ViewsModels\\ComunidadViewModel.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T01:57:08.345Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ReservaViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\ReservaViewModel.cs",
-              "RelativeDocumentMoniker": "ViewsModels\\ReservaViewModel.cs",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\ReservaViewModel.cs",
-              "RelativeToolTip": "ViewsModels\\ReservaViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-21T05:08:33.334Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "_Layout.cshtml.css",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Shared\\_Layout.cshtml.css",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml.css",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Shared\\_Layout.cshtml.css",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-11-24T01:57:03.613Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EscuestasSatisfaccionViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\EscuestasSatisfaccionViewModel.cs",
-              "RelativeDocumentMoniker": "ViewsModels\\EscuestasSatisfaccionViewModel.cs",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\EscuestasSatisfaccionViewModel.cs",
-              "RelativeToolTip": "ViewsModels\\EscuestasSatisfaccionViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-21T16:34:13.18Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ExperienciaViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\ExperienciaViewModel.cs",
-              "RelativeDocumentMoniker": "ViewsModels\\ExperienciaViewModel.cs",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\ExperienciaViewModel.cs",
-              "RelativeToolTip": "ViewsModels\\ExperienciaViewModel.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAASwD8AAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-21T02:50:36.18Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-24T01:56:59.624Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAAAK0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-24T01:56:38.334Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\_ViewStart.cshtml",
-              "RelativeToolTip": "Views\\_ViewStart.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-24T01:56:35.026Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "Views\\_ViewImports.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-24T01:56:32.345Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Recomendaciones\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Recomendaciones\\Index.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Recomendaciones\\Index.cshtml",
-              "RelativeToolTip": "Views\\Recomendaciones\\Index.cshtml",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-24T01:56:07.275Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Perfil\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Perfil\\Index.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Perfil\\Index.cshtml",
-              "RelativeToolTip": "Views\\Perfil\\Index.cshtml",
-              "ViewState": "AgIAAPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-24T01:56:00.567Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Mapa\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Mapa\\Index.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Mapa\\Index.cshtml",
-              "RelativeToolTip": "Views\\Mapa\\Index.cshtml",
-              "ViewState": "AgIAACMBAAAAAAAAAAAAAO8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-24T01:54:35.292Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Privacy.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Home\\Privacy.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Home\\Privacy.cshtml",
-              "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-24T01:54:17.492Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Crear.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Reservas\\Crear.cshtml",
-              "RelativeDocumentMoniker": "Views\\Reservas\\Crear.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Reservas\\Crear.cshtml",
-              "RelativeToolTip": "Views\\Reservas\\Crear.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAANgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-21T05:13:12.277Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "MisReservas.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Reservas\\MisReservas.cshtml",
-              "RelativeDocumentMoniker": "Views\\Reservas\\MisReservas.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Reservas\\MisReservas.cshtml",
-              "RelativeToolTip": "Views\\Reservas\\MisReservas.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ0AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-21T15:10:47.391Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Crear.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Rutas\\Crear.cshtml",
-              "RelativeDocumentMoniker": "Views\\Rutas\\Crear.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Rutas\\Crear.cshtml",
-              "RelativeToolTip": "Views\\Rutas\\Crear.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-21T03:27:14.587Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "MisRutas.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Rutas\\MisRutas.cshtml",
-              "RelativeDocumentMoniker": "Views\\Rutas\\MisRutas.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Rutas\\MisRutas.cshtml",
-              "RelativeToolTip": "Views\\Rutas\\MisRutas.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIgAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-21T04:23:29.996Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\DashboardAdmin\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\DashboardAdmin\\Index.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\DashboardAdmin\\Index.cshtml",
-              "RelativeToolTip": "Views\\DashboardAdmin\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-21T21:45:40.933Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Registro.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Cuenta\\Registro.cshtml",
-              "RelativeDocumentMoniker": "Views\\Cuenta\\Registro.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Cuenta\\Registro.cshtml",
-              "RelativeToolTip": "Views\\Cuenta\\Registro.cshtml",
-              "ViewState": "AgIAAAIBAAAAAAAAAAAAACkBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-24T01:53:23.381Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Cuenta\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Cuenta\\Login.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Cuenta\\Login.cshtml",
-              "RelativeToolTip": "Views\\Cuenta\\Login.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-24T01:53:20.832Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "index.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Catalogo\\index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Catalogo\\index.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Catalogo\\index.cshtml",
-              "RelativeToolTip": "Views\\Catalogo\\index.cshtml",
-              "ViewState": "AgIAAIcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-24T01:53:14.906Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Crear.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Encuestas\\Crear.cshtml",
-              "RelativeDocumentMoniker": "Views\\Encuestas\\Crear.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Encuestas\\Crear.cshtml",
-              "RelativeToolTip": "Views\\Encuestas\\Crear.cshtml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAF4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-21T16:37:59.82Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "MisEncuestas.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Encuestas\\MisEncuestas.cshtml",
-              "RelativeDocumentMoniker": "Views\\Encuestas\\MisEncuestas.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Encuestas\\MisEncuestas.cshtml",
-              "RelativeToolTip": "Views\\Encuestas\\MisEncuestas.cshtml",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAC8AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-21T16:38:46.121Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAJ8AAAAAAAAAAAAAAMoAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-21T03:14:58.608Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionExperiencias\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\AdministracionExperiencias\\Index.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionExperiencias\\Index.cshtml",
-              "RelativeToolTip": "Views\\AdministracionExperiencias\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-21T02:48:10.395Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "Editar.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionExperiencias\\Editar.cshtml",
-              "RelativeDocumentMoniker": "Views\\AdministracionExperiencias\\Editar.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionExperiencias\\Editar.cshtml",
-              "RelativeToolTip": "Views\\AdministracionExperiencias\\Editar.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0BAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-21T02:48:43.835Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "Crear.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionExperiencias\\Crear.cshtml",
-              "RelativeDocumentMoniker": "Views\\AdministracionExperiencias\\Crear.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionExperiencias\\Crear.cshtml",
-              "RelativeToolTip": "Views\\AdministracionExperiencias\\Crear.cshtml",
-              "ViewState": "AgIAACMBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-24T01:48:35.589Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionComunidades\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\AdministracionComunidades\\Index.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionComunidades\\Index.cshtml",
-              "RelativeToolTip": "Views\\AdministracionComunidades\\Index.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-24T01:48:32.182Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "Editar.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionComunidades\\Editar.cshtml",
-              "RelativeDocumentMoniker": "Views\\AdministracionComunidades\\Editar.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionComunidades\\Editar.cshtml",
-              "RelativeToolTip": "Views\\AdministracionComunidades\\Editar.cshtml",
-              "ViewState": "AgIAAJkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-24T01:48:27.708Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionReportes\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\AdministracionReportes\\Index.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionReportes\\Index.cshtml",
-              "RelativeToolTip": "Views\\AdministracionReportes\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-21T21:28:58.753Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionReservas\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\AdministracionReservas\\Index.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionReservas\\Index.cshtml",
-              "RelativeToolTip": "Views\\AdministracionReservas\\Index.cshtml",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAAAG8AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-21T15:26:41.777Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Detalles.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Catalogo\\Detalles.cshtml",
-              "RelativeDocumentMoniker": "Views\\Catalogo\\Detalles.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Catalogo\\Detalles.cshtml",
-              "RelativeToolTip": "Views\\Catalogo\\Detalles.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-21T05:14:04.327Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "Crear.cshtml",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionComunidades\\Crear.cshtml",
-              "RelativeDocumentMoniker": "Views\\AdministracionComunidades\\Crear.cshtml",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionComunidades\\Crear.cshtml",
-              "RelativeToolTip": "Views\\AdministracionComunidades\\Crear.cshtml",
-              "ViewState": "AgIAAHEBAAAAAAAAAAAAAJ4BAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-24T01:47:17.877Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "Comunidad.cs",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Models\\Comunidad.cs",
-              "RelativeDocumentMoniker": "Models\\Comunidad.cs",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Models\\Comunidad.cs",
-              "RelativeToolTip": "Models\\Comunidad.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T01:47:13.646Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "Categorium.cs",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Models\\Categorium.cs",
-              "RelativeDocumentMoniker": "Models\\Categorium.cs",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Models\\Categorium.cs",
-              "RelativeToolTip": "Models\\Categorium.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T01:47:12.968Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "Canton.cs",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Models\\Canton.cs",
-              "RelativeDocumentMoniker": "Models\\Canton.cs",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Models\\Canton.cs",
-              "RelativeToolTip": "Models\\Canton.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T01:47:11.549Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "PuraRutaContext.cs",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Data\\PuraRutaContext.cs",
-              "RelativeDocumentMoniker": "Data\\PuraRutaContext.cs",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Data\\PuraRutaContext.cs",
-              "RelativeToolTip": "Data\\PuraRutaContext.cs",
-              "ViewState": "AgIAAOQBAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T01:46:28.768Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "RecomendacionesController.cs",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\RecomendacionesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\RecomendacionesController.cs",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\RecomendacionesController.cs",
-              "RelativeToolTip": "Controllers\\RecomendacionesController.cs",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAwwIAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T01:45:38.559Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "PerfilController.cs",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\PerfilController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PerfilController.cs",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\PerfilController.cs",
-              "RelativeToolTip": "Controllers\\PerfilController.cs",
-              "ViewState": "AgIAALwAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T01:45:33.08Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "MapaController.cs",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\MapaController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MapaController.cs",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\MapaController.cs",
-              "RelativeToolTip": "Controllers\\MapaController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T01:45:31.147Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T01:45:29.134Z",
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -912,7 +295,658 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdministracionComunidadesController.cs",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\AdministracionComunidadesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdministracionComunidadesController.cs",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\AdministracionComunidadesController.cs",
+              "RelativeToolTip": "Controllers\\AdministracionComunidadesController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAwwCMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T01:41:11.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "index.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Catalogo\\index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Catalogo\\index.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Catalogo\\index.cshtml",
+              "RelativeToolTip": "Views\\Catalogo\\index.cshtml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAHIAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-24T01:53:14.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Mapa\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Mapa\\Index.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Mapa\\Index.cshtml",
+              "RelativeToolTip": "Views\\Mapa\\Index.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-24T01:54:35.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PuraRutaContext.cs",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Data\\PuraRutaContext.cs",
+              "RelativeDocumentMoniker": "Data\\PuraRutaContext.cs",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Data\\PuraRutaContext.cs",
+              "RelativeToolTip": "Data\\PuraRutaContext.cs",
+              "ViewState": "AgIAAN4AAAAAAAAAAAAEwBABAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T01:46:28.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FotoExperiencium.cs",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Models\\FotoExperiencium.cs",
+              "RelativeDocumentMoniker": "Models\\FotoExperiencium.cs",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Models\\FotoExperiencium.cs",
+              "RelativeToolTip": "Models\\FotoExperiencium.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T03:07:23.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-11-24T01:57:26.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FotoComunidad.cs",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Models\\FotoComunidad.cs",
+              "RelativeDocumentMoniker": "Models\\FotoComunidad.cs",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Models\\FotoComunidad.cs",
+              "RelativeToolTip": "Models\\FotoComunidad.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T03:07:09.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T01:57:31.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Detalles.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Catalogo\\Detalles.cshtml",
+              "RelativeDocumentMoniker": "Views\\Catalogo\\Detalles.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Catalogo\\Detalles.cshtml",
+              "RelativeToolTip": "Views\\Catalogo\\Detalles.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-21T05:14:04.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AdministracionExperienciasController.cs",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\AdministracionExperienciasController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdministracionExperienciasController.cs",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\AdministracionExperienciasController.cs",
+              "RelativeToolTip": "Controllers\\AdministracionExperienciasController.cs",
+              "ViewState": "AgIAAKABAAAAAAAAAAAAANMBAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-21T02:47:04.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CatalogoController.cs",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\CatalogoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CatalogoController.cs",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\CatalogoController.cs",
+              "RelativeToolTip": "Controllers\\CatalogoController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAEwDsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T01:42:06.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RutaViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\RutaViewModel.cs",
+              "RelativeDocumentMoniker": "ViewsModels\\RutaViewModel.cs",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\RutaViewModel.cs",
+              "RelativeToolTip": "ViewsModels\\RutaViewModel.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAA9wBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-21T03:22:11.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DashboardAdminViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\DashboardAdminViewModel.cs",
+              "RelativeDocumentMoniker": "ViewsModels\\DashboardAdminViewModel.cs",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\DashboardAdminViewModel.cs",
+              "RelativeToolTip": "ViewsModels\\DashboardAdminViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-21T21:43:14.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LoginViewModels.cs",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\LoginViewModels.cs",
+              "RelativeDocumentMoniker": "ViewsModels\\LoginViewModels.cs",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\LoginViewModels.cs",
+              "RelativeToolTip": "ViewsModels\\LoginViewModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T01:57:16.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PerfilViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\PerfilViewModel.cs",
+              "RelativeDocumentMoniker": "ViewsModels\\PerfilViewModel.cs",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\PerfilViewModel.cs",
+              "RelativeToolTip": "ViewsModels\\PerfilViewModel.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T01:57:18.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RegistroTuristaViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\RegistroTuristaViewModel.cs",
+              "RelativeDocumentMoniker": "ViewsModels\\RegistroTuristaViewModel.cs",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\RegistroTuristaViewModel.cs",
+              "RelativeToolTip": "ViewsModels\\RegistroTuristaViewModel.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T01:57:20.71Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ComunidadViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\ComunidadViewModel.cs",
+              "RelativeDocumentMoniker": "ViewsModels\\ComunidadViewModel.cs",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\ComunidadViewModel.cs",
+              "RelativeToolTip": "ViewsModels\\ComunidadViewModel.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T01:57:08.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ReservaViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\ReservaViewModel.cs",
+              "RelativeDocumentMoniker": "ViewsModels\\ReservaViewModel.cs",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\ReservaViewModel.cs",
+              "RelativeToolTip": "ViewsModels\\ReservaViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-21T05:08:33.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-11-24T01:57:03.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "EscuestasSatisfaccionViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\EscuestasSatisfaccionViewModel.cs",
+              "RelativeDocumentMoniker": "ViewsModels\\EscuestasSatisfaccionViewModel.cs",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\EscuestasSatisfaccionViewModel.cs",
+              "RelativeToolTip": "ViewsModels\\EscuestasSatisfaccionViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-21T16:34:13.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ExperienciaViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\ExperienciaViewModel.cs",
+              "RelativeDocumentMoniker": "ViewsModels\\ExperienciaViewModel.cs",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\ViewsModels\\ExperienciaViewModel.cs",
+              "RelativeToolTip": "ViewsModels\\ExperienciaViewModel.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAASwD8AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-21T02:50:36.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-24T01:56:59.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAAAK0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-24T01:56:38.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-24T01:56:35.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-24T01:56:32.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Recomendaciones\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Recomendaciones\\Index.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Recomendaciones\\Index.cshtml",
+              "RelativeToolTip": "Views\\Recomendaciones\\Index.cshtml",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-24T01:56:07.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Perfil\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Perfil\\Index.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Perfil\\Index.cshtml",
+              "RelativeToolTip": "Views\\Perfil\\Index.cshtml",
+              "ViewState": "AgIAAPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-24T01:56:00.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-24T01:54:17.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Crear.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Reservas\\Crear.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reservas\\Crear.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Reservas\\Crear.cshtml",
+              "RelativeToolTip": "Views\\Reservas\\Crear.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-21T05:13:12.277Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "MisReservas.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Reservas\\MisReservas.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reservas\\MisReservas.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Reservas\\MisReservas.cshtml",
+              "RelativeToolTip": "Views\\Reservas\\MisReservas.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ0AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-21T15:10:47.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Crear.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Rutas\\Crear.cshtml",
+              "RelativeDocumentMoniker": "Views\\Rutas\\Crear.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Rutas\\Crear.cshtml",
+              "RelativeToolTip": "Views\\Rutas\\Crear.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-21T03:27:14.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "MisRutas.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Rutas\\MisRutas.cshtml",
+              "RelativeDocumentMoniker": "Views\\Rutas\\MisRutas.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Rutas\\MisRutas.cshtml",
+              "RelativeToolTip": "Views\\Rutas\\MisRutas.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIgAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-21T04:23:29.996Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\DashboardAdmin\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\DashboardAdmin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\DashboardAdmin\\Index.cshtml",
+              "RelativeToolTip": "Views\\DashboardAdmin\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-21T21:45:40.933Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Registro.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Cuenta\\Registro.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cuenta\\Registro.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Cuenta\\Registro.cshtml",
+              "RelativeToolTip": "Views\\Cuenta\\Registro.cshtml",
+              "ViewState": "AgIAAAIBAAAAAAAAAAAAACkBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-24T01:53:23.381Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Cuenta\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cuenta\\Login.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Cuenta\\Login.cshtml",
+              "RelativeToolTip": "Views\\Cuenta\\Login.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-24T01:53:20.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Crear.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Encuestas\\Crear.cshtml",
+              "RelativeDocumentMoniker": "Views\\Encuestas\\Crear.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Encuestas\\Crear.cshtml",
+              "RelativeToolTip": "Views\\Encuestas\\Crear.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAF4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-21T16:37:59.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "MisEncuestas.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Encuestas\\MisEncuestas.cshtml",
+              "RelativeDocumentMoniker": "Views\\Encuestas\\MisEncuestas.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Encuestas\\MisEncuestas.cshtml",
+              "RelativeToolTip": "Views\\Encuestas\\MisEncuestas.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAC8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-21T16:38:46.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAAAMoAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-21T03:14:58.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionExperiencias\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\AdministracionExperiencias\\Index.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionExperiencias\\Index.cshtml",
+              "RelativeToolTip": "Views\\AdministracionExperiencias\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-21T02:48:10.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Editar.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionExperiencias\\Editar.cshtml",
+              "RelativeDocumentMoniker": "Views\\AdministracionExperiencias\\Editar.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionExperiencias\\Editar.cshtml",
+              "RelativeToolTip": "Views\\AdministracionExperiencias\\Editar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0BAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-21T02:48:43.835Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Crear.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionExperiencias\\Crear.cshtml",
+              "RelativeDocumentMoniker": "Views\\AdministracionExperiencias\\Crear.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionExperiencias\\Crear.cshtml",
+              "RelativeToolTip": "Views\\AdministracionExperiencias\\Crear.cshtml",
+              "ViewState": "AgIAACMBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-24T01:48:35.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionComunidades\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\AdministracionComunidades\\Index.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionComunidades\\Index.cshtml",
+              "RelativeToolTip": "Views\\AdministracionComunidades\\Index.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-24T01:48:32.182Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Editar.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionComunidades\\Editar.cshtml",
+              "RelativeDocumentMoniker": "Views\\AdministracionComunidades\\Editar.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionComunidades\\Editar.cshtml",
+              "RelativeToolTip": "Views\\AdministracionComunidades\\Editar.cshtml",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-24T01:48:27.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionReportes\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\AdministracionReportes\\Index.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionReportes\\Index.cshtml",
+              "RelativeToolTip": "Views\\AdministracionReportes\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-21T21:28:58.753Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionReservas\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\AdministracionReservas\\Index.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionReservas\\Index.cshtml",
+              "RelativeToolTip": "Views\\AdministracionReservas\\Index.cshtml",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAG8AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-21T15:26:41.777Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 45,
+              "Title": "Crear.cshtml",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionComunidades\\Crear.cshtml",
+              "RelativeDocumentMoniker": "Views\\AdministracionComunidades\\Crear.cshtml",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Views\\AdministracionComunidades\\Crear.cshtml",
+              "RelativeToolTip": "Views\\AdministracionComunidades\\Crear.cshtml",
+              "ViewState": "AgIAAHEBAAAAAAAAAAAAAJ4BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-24T01:47:17.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Comunidad.cs",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Models\\Comunidad.cs",
+              "RelativeDocumentMoniker": "Models\\Comunidad.cs",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Models\\Comunidad.cs",
+              "RelativeToolTip": "Models\\Comunidad.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T01:47:13.646Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Categorium.cs",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Models\\Categorium.cs",
+              "RelativeDocumentMoniker": "Models\\Categorium.cs",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Models\\Categorium.cs",
+              "RelativeToolTip": "Models\\Categorium.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T01:47:12.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Canton.cs",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Models\\Canton.cs",
+              "RelativeDocumentMoniker": "Models\\Canton.cs",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Models\\Canton.cs",
+              "RelativeToolTip": "Models\\Canton.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T01:47:11.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "RecomendacionesController.cs",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\RecomendacionesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RecomendacionesController.cs",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\RecomendacionesController.cs",
+              "RelativeToolTip": "Controllers\\RecomendacionesController.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAwwIAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T01:45:38.559Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "PerfilController.cs",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\PerfilController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PerfilController.cs",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\PerfilController.cs",
+              "RelativeToolTip": "Controllers\\PerfilController.cs",
+              "ViewState": "AgIAALwAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T01:45:33.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "MapaController.cs",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\MapaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MapaController.cs",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\MapaController.cs",
+              "RelativeToolTip": "Controllers\\MapaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T01:45:31.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T01:45:29.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
               "Title": "ReservasController.cs",
               "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\ReservasController.cs",
               "RelativeDocumentMoniker": "Controllers\\ReservasController.cs",
@@ -920,12 +954,11 @@
               "RelativeToolTip": "Controllers\\ReservasController.cs",
               "ViewState": "AgIAAO0AAAAAAAAAAAAmwLUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-21T05:09:02.982Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-21T05:09:02.982Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 49,
               "Title": "RutaController.cs",
               "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\RutaController.cs",
               "RelativeDocumentMoniker": "Controllers\\RutaController.cs",
@@ -933,25 +966,11 @@
               "RelativeToolTip": "Controllers\\RutaController.cs",
               "ViewState": "AgIAANAAAAAAAAAAAAAcwMEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-21T03:23:10.611Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-21T03:23:10.611Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "CatalogoController.cs",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\CatalogoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CatalogoController.cs",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\CatalogoController.cs",
-              "RelativeToolTip": "Controllers\\CatalogoController.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAwwGEAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T01:42:06.838Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 58,
               "Title": "CuentaController.cs",
               "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\CuentaController.cs",
               "RelativeDocumentMoniker": "Controllers\\CuentaController.cs",
@@ -959,12 +978,11 @@
               "RelativeToolTip": "Controllers\\CuentaController.cs",
               "ViewState": "AgIAAOAAAAAAAAAAAAAuwAYBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T01:42:19.248Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-24T01:42:19.248Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 57,
               "Title": "AdministracionReservasController.cs",
               "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\AdministracionReservasController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdministracionReservasController.cs",
@@ -972,12 +990,11 @@
               "RelativeToolTip": "Controllers\\AdministracionReservasController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-21T15:26:02.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-21T15:26:02.829Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 56,
               "Title": "DashboardAdminController.cs",
               "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\DashboardAdminController.cs",
               "RelativeDocumentMoniker": "Controllers\\DashboardAdminController.cs",
@@ -985,12 +1002,11 @@
               "RelativeToolTip": "Controllers\\DashboardAdminController.cs",
               "ViewState": "AgIAACwAAAAAAAAAAAAwwFoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-21T21:44:45.41Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-21T21:44:45.41Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 55,
               "Title": "EncuestasController.cs",
               "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\EncuestasController.cs",
               "RelativeDocumentMoniker": "Controllers\\EncuestasController.cs",
@@ -998,12 +1014,11 @@
               "RelativeToolTip": "Controllers\\EncuestasController.cs",
               "ViewState": "AgIAAGgAAAAAAAAAAAAIwIgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-21T16:35:13.893Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-21T16:35:13.893Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 59,
               "Title": "Administraci\u00F3nReportesController.cs",
               "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\Administraci\u00F3nReportesController.cs",
               "RelativeDocumentMoniker": "Controllers\\Administraci\u00F3nReportesController.cs",
@@ -1011,25 +1026,11 @@
               "RelativeToolTip": "Controllers\\Administraci\u00F3nReportesController.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAswDQAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-21T21:28:25.435Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-21T21:28:25.435Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "AdministracionComunidadesController.cs",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\AdministracionComunidadesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdministracionComunidadesController.cs",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\AdministracionComunidadesController.cs",
-              "RelativeToolTip": "Controllers\\AdministracionComunidadesController.cs",
-              "ViewState": "AgIAAO0AAAAAAAAAAAAiwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T01:41:11.383Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 60,
               "Title": "site.js",
               "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
@@ -1037,25 +1038,7 @@
               "RelativeToolTip": "wwwroot\\js\\site.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-11-24T01:41:05.855Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "AdministracionExperienciasController.cs",
-              "DocumentMoniker": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\AdministracionExperienciasController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdministracionExperienciasController.cs",
-              "ToolTip": "C:\\Users\\niels\\Documents\\GitHub\\PuraRuta\\PuraRuta\\Controllers\\AdministracionExperienciasController.cs",
-              "RelativeToolTip": "Controllers\\AdministracionExperienciasController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-21T02:47:04.923Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "WhenOpened": "2026-11-24T01:41:05.855Z"
             }
           ]
         }

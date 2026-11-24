@@ -9,7 +9,7 @@ public partial class EstadoReserva
 
     public string Nombre { get; set; } = null!;
 
-    public string DescripcionEstadoReserva { get; set; } = null!;
+    public string? DescripcionEstadoReserva { get; set; }
 
     public virtual ICollection<Reserva> Reservas { get; set; } = new List<Reserva>();
 }

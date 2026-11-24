@@ -11,7 +11,7 @@ public partial class FotoExperiencium
 
     public string RutaImagen { get; set; } = null!;
 
-    public string Descripcion { get; set; } = null!;
+    public string? DescripcionFotoExperiencia { get; set; }
 
     public virtual Experiencium IdExperienciaNavigation { get; set; } = null!;
 }

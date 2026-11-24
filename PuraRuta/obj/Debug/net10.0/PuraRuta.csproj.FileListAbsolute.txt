@@ -235,8 +235,8 @@ C:\Users\niels\Documents\GitHub\EcomConnect\PuraRuta\obj\Debug\net10.0\ref\PuraR
 C:\Users\niels\Documents\GitHub\EcomConnect\PuraRuta\obj\Debug\net10.0\compressed\n57gtnhn8y-{0}-luxg159l2s-luxg159l2s.gz
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\bin\Debug\net10.0\appsettings.Development.json
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\bin\Debug\net10.0\appsettings.json
-C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\bin\Debug\net10.0\PuraRuta.staticwebassets.endpoints.json
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\bin\Debug\net10.0\PuraRuta.staticwebassets.runtime.json
+C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\bin\Debug\net10.0\PuraRuta.staticwebassets.endpoints.json
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\bin\Debug\net10.0\PuraRuta.exe
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\bin\Debug\net10.0\PuraRuta.deps.json
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\bin\Debug\net10.0\PuraRuta.runtimeconfig.json
@@ -392,6 +392,7 @@ C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\obj\Debug\net10.0\rjsmcshtml.d
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\obj\Debug\net10.0\scopedcss\bundle\PuraRuta.styles.css
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\obj\Debug\net10.0\scopedcss\projectbundle\PuraRuta.bundle.scp.css
+C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\obj\Debug\net10.0\compressed\n57gtnhn8y-{0}-moh7t6xg40-moh7t6xg40.gz
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\obj\Debug\net10.0\compressed\228cienv00-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\obj\Debug\net10.0\compressed\uha1x6g8gf-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\obj\Debug\net10.0\compressed\4huivluk4o-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -460,11 +461,10 @@ C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\obj\Debug\net10.0\staticwebass
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\obj\Debug\net10.0\staticwebassets.development.json
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\obj\Debug\net10.0\swae.build.ex.cache
+C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\obj\Debug\net10.0\PuraRuta.csproj.Up2Date
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\obj\Debug\net10.0\PuraRuta.dll
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\obj\Debug\net10.0\refint\PuraRuta.dll
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\obj\Debug\net10.0\PuraRuta.pdb
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\obj\Debug\net10.0\PuraRuta.genruntimeconfig.cache
 C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\obj\Debug\net10.0\ref\PuraRuta.dll
-C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
-C:\Users\niels\Documents\GitHub\PuraRuta\PuraRuta\obj\Debug\net10.0\compressed\n57gtnhn8y-{0}-755w2bhtgj-755w2bhtgj.gz

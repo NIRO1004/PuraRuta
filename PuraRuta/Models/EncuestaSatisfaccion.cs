@@ -11,7 +11,7 @@ public partial class EncuestaSatisfaccion
 
     public int Calificacion { get; set; }
 
-    public string Comentario { get; set; } = null!;
+    public string? Comentario { get; set; }
 
     public bool Recomendaria { get; set; }
 

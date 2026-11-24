@@ -247,7 +247,7 @@ namespace PuraRuta.Controllers
                 {
                     IdComunidad = idComunidad,
                     RutaImagen = rutaWeb,
-                    Descripcion = string.IsNullOrWhiteSpace(descripcion) ? "Fotografía de la comunidad" : descripcion
+                    DescripcionFotoComunidad = string.IsNullOrWhiteSpace(descripcion) ? "Fotografía de la comunidad" : descripcion
                 });
             }
         }

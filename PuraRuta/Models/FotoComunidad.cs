@@ -11,7 +11,8 @@ public partial class FotoComunidad
 
     public string RutaImagen { get; set; } = null!;
 
-    public string Descripcion { get; set; } = null!;
+    public string? DescripcionFotoComunidad { get; set; }
 
     public virtual Comunidad IdComunidadNavigation { get; set; } = null!;
+    
 }

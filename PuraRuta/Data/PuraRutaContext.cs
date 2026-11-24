@@ -254,9 +254,9 @@ public partial class PuraRutaContext : DbContext
             entity.HasIndex(e => e.IdComunidad, "IX_Foto_Comunidad_Comunidad");
 
             entity.Property(e => e.IdFotoComunidad).HasColumnName("id_foto_comunidad");
-            entity.Property(e => e.Descripcion)
+            entity.Property(e => e.DescripcionFotoComunidad)
                 .HasMaxLength(150)
-                .HasColumnName("descripcion");
+                .HasColumnName("descripcion_foto_comunidad");
             entity.Property(e => e.IdComunidad).HasColumnName("id_comunidad");
             entity.Property(e => e.RutaImagen)
                 .HasMaxLength(200)
@@ -277,9 +277,9 @@ public partial class PuraRutaContext : DbContext
             entity.HasIndex(e => e.IdExperiencia, "IX_Foto_Experiencia_Experiencia");
 
             entity.Property(e => e.IdFotoExperiencia).HasColumnName("id_foto_experiencia");
-            entity.Property(e => e.Descripcion)
+            entity.Property(e => e.DescripcionFotoExperiencia)
                 .HasMaxLength(150)
-                .HasColumnName("descripcion");
+                .HasColumnName("descripcion_foto_experiencia");
             entity.Property(e => e.IdExperiencia).HasColumnName("id_experiencia");
             entity.Property(e => e.RutaImagen)
                 .HasMaxLength(200)
